@@ -1,15 +1,16 @@
 import React from 'react'
 import "./Intro.css"
-import Github from "../../img/github.png"
-import Linkedin from "../../img/linkedin.png"
-import BasketBall from "../../img/basketball.png"
-import Football from "../../img/football.png"
-import VidGame from "../../img/2k.png"
-import DogHeart from "../../img/dogheart.png"
-import Me from "../../img/Me.jpeg"
-import Music from "../../img/music.jpeg"
+import Github from "../../Img/github.png"
+import Linkedin from "../../Img/linkedin.png"
+import BasketBall from "../../Img/basketball.png"
+import Football from "../../Img/football.png"
+import VidGame from "../../Img/2k.png"
+import DogHeart from "../../Img/dogheart.png"
+import Me from "../../Img/Me.jpeg"
+import Music from "../../Img/music.jpeg"
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
-import Car from "../../img/car.png"
+import Car from "../../Img/car.png"
+import CV from "./CV.docx"
 
 const Intro = () => {
   return (
@@ -21,8 +22,9 @@ const Intro = () => {
                 <span>A dedicated Software Engineer with a passion for frontend technology & design.</span>
             </div>
        
-        <a  className="buttonTag" href='https://docs.google.com/document/d/18PxRP97Ol9js9mTZvpxjsNPYE63B57ExSMUJ7zZcTS0/edit#heading=h.iiy9p81ivgql' download>
-            <button className="button i-button" type='submit' alt="Resume">Download Resume</button>
+        <a  className="buttonTag" href={CV
+        } download>
+            <button className="button i-button" type='submit' alt="Resume">Download CV</button>
         </a>
         <div className="i-icons">
             <a className="gitTag" href="https://github.com/Moonwalker5823">

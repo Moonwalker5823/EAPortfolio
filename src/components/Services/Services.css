@@ -1,0 +1,61 @@
+.services {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin: 11rem auto;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.service > :nth-child(1) {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.service > :nth-child(2) {
+    color: var(--blue);
+    font-size: 25px;
+    margin-top: 1rem;
+}
+.service > :nth-child(3) {
+    color: var(--gray);
+    font-size: 20px;
+}
+.service > :nth-child(4) {
+    font-size: 20px;
+}
+.s-button {
+   width: 8rem; 
+   height: 4rem;
+   margin-top: 1rem;
+}
+.l-card {
+    left: 10rem;
+}
+.r-card {
+    top: 15rem;
+    right: 10rem;
+}
+.m-card {
+    top: 23rem;
+    left: 8rem;
+}
+.cards {
+    position: relative;
+}
+.cards>* {
+    position: absolute;
+}
+
+.s-blur1 {
+    left: 2rem
+}
+.s-blur2 {
+    top: 13rem;
+    left: 2rem
+}

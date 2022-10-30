@@ -1,0 +1,38 @@
+.card {
+    width: 10rem;
+    height: 13rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 10rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.26);
+    border: 7px solid var(--blue);
+    border-radius: 20%;
+    box-shadow: var(--boxShadow);
+    padding: 2px 26px 2rem 20px;
+}
+.card > img {
+  width: 60%;
+  height: 45%;
+}
+.card span:nth-child(2) {
+    color: var(--blue);
+    font-size: 20px;
+}
+.card span:nth-child(3) {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+.c-button {
+    background: blue;
+    color: white;
+    box-shadow: 0px 19px 60px rgba(0,0,0, 0.08);
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
