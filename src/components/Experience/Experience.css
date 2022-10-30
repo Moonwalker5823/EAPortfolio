@@ -1,0 +1,51 @@
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 5vh;
+    margin-bottom: 8rem;
+}
+
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.circle:nth-child(1) {
+    margin-bottom: 2rem;
+}
+
+.circle::before {
+    border-radius: 50%;
+    content: "";
+    background-image: linear-gradient(to top, #5717cf 0%, #db196d 100%);
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: var(--boxShadow);
+}
+
+.achievement span:nth-child(3) {
+   color: var(--blue); 
+}
+.achievement>span {
+    font-size: 20px;
+    font-weight: bold;
+}
