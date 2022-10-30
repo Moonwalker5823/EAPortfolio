@@ -1,0 +1,102 @@
+.hobbies {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-top: 4rem;
+}
+.hobby {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hobby>span {
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+
+.hobby > span:nth-child(1) {
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.h-blur1 {
+    top: 30rem;
+    left: 2rem
+}
+.h-blur2 {
+    top: 2rem;
+    left: 32rem;
+}
+
+.h-right {
+    position: relative;
+}
+.h-mainCircle {
+    left: -2rem;
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 100%;
+    box-shadow: var(--boxShadow);
+    top: 18rem;
+    background: white;
+}
+
+.h-secCircle > img {
+    transform: scale(.5);
+    border-radius: 10%;
+}
+.h-mainCircle > :nth-child(1) {
+    top: -9rem;
+    left: 6rem;
+}
+.h-mainCircle > :nth-child(2) {
+    top: 5rem;
+    left: -9rem;
+}
+.h-mainCircle > :nth-child(3) {
+    top: 7rem;
+    left: 7rem;
+    transform: scale(.7);
+    background: whitesmoke;
+}
+.h-mainCircle > :nth-child(4) {
+    top: 6rem;
+    left: 23rem;
+}
+.h-mainCircle > :nth-child(5) {
+    top: 23rem;
+    left: 6rem;
+}
+.h-secCircle {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #0000ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 'none';
+    box-shadow: var(--boxShadow);
+    background: white;
+}
+.h-backgroundImg {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+    z-index: -1;
+}
+.blueCircle {
+    background: blue;
+    left: -10rem;
+    top: 12rem;
+}
+.redCircle {
+    background: red;
+    left:10rem;
+    top: 28rem;
+}

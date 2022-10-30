@@ -30,6 +30,7 @@ const Services = () => {
                     emoji= {Cool}
                     text="Design"
                     detail={"Figma, Sketch, Photoshop, Excalidraw"}
+                    site="https://www.figma.com/design-systems/?utm_source=google&utm_medium=cpc&utm_campaign=18674170714&utm_term=&utm_content=629977413034&gclid=Cj0KCQjwwfiaBhC7ARIsAGvcPe5aliIktcXbbpwsrLvc2_RBB1H1UGGSZLW6R_bpfp0uCf1ro_UQ4LQaAnv-EALw_wcB"
                 />
             </div>
             <div className="blur s-blur2" style={{background: "#EC5B6C"}}></div>
@@ -38,6 +39,7 @@ const Services = () => {
                     emoji= {Smile}
                     text="Engineer"
                     detail={"React, Node.js, Next.js, Axios, SQL, Mongodb"}
+                    site="https://reactjs.org/docs/getting-started.html"
                 />
             </div>
             <div className="m-card">
@@ -45,6 +47,7 @@ const Services = () => {
                     emoji= {Wink}
                     text="UX/UI"
                     detail={"Bootstrap, Material UI, Emotion, "}
+                    site="https://mui.com/"
                 />
             </div>
         </div>
