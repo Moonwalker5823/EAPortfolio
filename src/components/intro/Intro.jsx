@@ -47,27 +47,31 @@ const Intro = () => {
                 initial={{left: "-26%"}}
                 whileInView={{left: "-0%"}}
                 transition={transition}
-                className='i-rightFloatingDiv'
+                className='i-rightFloatingDiv floating-div'
                 
                 >
                 <img src={Football} alt="" />
                 <img src={VidGame} alt="" />
                 <img src={Car} alt="" />
             </motion.div>
+
             <motion.div 
                 initial={{top: "-4%", left: "74%"}}
                 whileInView={{left: "55%"}}
                 transition={transition}
                 style={{top: '-4%', left: '60%'}}
+                className="floating-div"
             >
                 <FloatingDiv 
                     image={DogHeart} txt1="Web" txt2="Developer"/>
             </motion.div>
+
             <motion.div 
                 initial={{left: "9rem", top: "18rem"}}
                 whileInView={{left: "0rem",top: "20rem"}}
                 transition={transition}
                 style={{top: '18rem', left: '0rem'}}
+                className="floating-div"
             >
                 <FloatingDiv image={BasketBall} txt1="Responsive" txt2="Design"/>
             </motion.div>

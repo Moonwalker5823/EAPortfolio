@@ -60,3 +60,22 @@
 .testimonial>p {
     color: var(--black);
 }
+
+@media screen and (max-width: 480px) {
+    .t-wrapper{
+        margin-top: 20rem;
+        padding: 0;
+        left: -1.5rem;
+        height: 50rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .testimonial>p{
+        font-size: 15px;
+    }
+    .testimonial>img {
+        width: 50px;
+        height: 50px;
+    }
+    
+}

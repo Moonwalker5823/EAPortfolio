@@ -35,3 +35,9 @@
   color: var(--black);
   border: 1px solid var(--blue);
 }
+
+@media  screen and (max-width: 480px) {
+  .App {
+    padding: .5rem 1rem;
+  }
+}

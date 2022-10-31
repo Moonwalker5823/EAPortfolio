@@ -102,26 +102,20 @@
 }
 
 @media screen and (max-width: 480px) {
-    .works {
+    .hobbies {
       flex-direction: column;
       height: 55rem;
       padding: 0;
       gap: 5rem;
     }
-  
-    .w-right {
-      display: flex;
-      align-items: flex-start;
-      justify-content:flex-start;
-      transform: scale(0.7);
+    .h-right{
+        display: flex;
+        top: -10rem;
+        left: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.4);
     }
-    .w-mainCircle{
-      position: static;
-    }
-    .w-backCircle{
-      left: 8rem!important;
-    }
-  
-  }
 
+}
   

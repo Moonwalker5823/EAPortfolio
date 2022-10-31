@@ -49,3 +49,12 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 480px) {
+    .experience {
+        margin: 0 auto;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
