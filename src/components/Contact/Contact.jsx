@@ -1,20 +1,10 @@
 import "./Contact.css"
-import { useRef } from "react"
-import emailjs from "emailjs/browser"
+import { useState } from "react"
 
 const Contact = () => {
-    const form = useRef();
+    const [done, setdone] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
   return (
     <div className="contact-form">
         <div className="w-left">
@@ -26,12 +16,15 @@ const Contact = () => {
         </div>
 
         <div className="c-right">
-            <form action="">
-                <input type="text" name="userName" className="user" placeholder="Name"/>
-                <input type="email" name="email" className="user" placeholder="Email"/>
-                <textarea name="message" placeholder="Message" cols="30" rows="10" className="user"></textarea>
-                <input type="submit" value="Send" className="button"/>
+            <form action="https://formsubmit.co/easkew81@yahoo.com" method="POST">
+                <input type="text" name="name" className="user" placeholder="Name" required/>
+                <input type="email" name="email" className="user" placeholder="Email" required/>
+                <textarea type="textarea" name="message" placeholder="Message" cols="30" rows="10" className="user"></textarea>
+                <input type="submit" onClick={()=> setdone(!done)}value="Send" className="button"/>
+                <span>{done && "Thank You for contacting Me!"}</span>
                 <div className="blur c-blur1" style={{background: "#409FF6"}}></div>
+                <div className="blur c-blur2" style={{background: "#EC5B6C"}}></div>
+                <input type="hidden" name="_autoresponse" value="Thank You! for contacting Eric Askew.  I will respond shortly."></input>
             </form>
         </div>
     </div>
