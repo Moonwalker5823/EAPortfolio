@@ -4,13 +4,16 @@ import Smile from "../../Img/smileemoji.png"
 import Wink from "../../Img/winkemoji.png"
 import Card from "../Card/Card"
 import Resume from "./EricResume.pdf"
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Services = () => {
+    const { darkMode } = useThemeContext();
+
   return (
     <div className="services">
         {/*Left */}
         <div className="service">
-            <span>My Services</span>
+            <span style={{color: darkMode && "white"}}>My Services</span>
             <span> 
             Innovative software engineer. </span>
             <span>

@@ -34,6 +34,9 @@
    height: 4rem;
    margin-top: 1rem;
 }
+.service>a {
+    width: 20px;
+}
 .l-card {
     left: 10rem;
 }
@@ -47,6 +50,8 @@
 }
 .cards {
     position: relative;
+    left: 10%;
+    top: 10%;
 }
 .cards>* {
     position: absolute;

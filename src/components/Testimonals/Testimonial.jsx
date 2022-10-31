@@ -8,8 +8,10 @@ import Brian from "../../Img/Brian.png"
 import { Pagination } from "swiper"
 import 'swiper/css/pagination'
 import 'swiper/css'
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Testimonial = () => {
+  const { darkMode } = useThemeContext();
   const clients = [
     {
       id: 1,
@@ -64,7 +66,7 @@ const Testimonial = () => {
             <div className="testimonial">
               <img src={client.img} alt={client.title} />
               <span>{client.title}</span>
-              <p>{client.review}</p>
+              <p style={{color: darkMode && "white"}}>{client.review}</p>
             </div>
           </SwiperSlide>
        )}

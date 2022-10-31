@@ -1,20 +1,21 @@
 import "./Contact.css"
 import { useState } from "react"
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Contact = () => {
     const [done, setdone] = useState(false);
+    const { darkMode } = useThemeContext();
 
 
   return (
     <div className="contact-form">
         <div className="w-left">
             <div className="hobby">
-                <span>Get in touch</span>
+                <span style={{color: darkMode && "white"}}>Get in touch</span>
                 <span>Contact me</span>
                 
             </div>
         </div>
-
         <div className="c-right">
             <form action="https://formsubmit.co/easkew81@yahoo.com" method="POST">
                 <input type="text" name="name" className="user" placeholder="Name" required/>

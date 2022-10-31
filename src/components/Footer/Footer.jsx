@@ -2,10 +2,12 @@ import "./Footer.css"
 import Wave from "../../Img/musicWave.jpeg"
 import Facebook from "@iconscout/react-unicons/icons/uil-facebook"
 import Github from "@iconscout/react-unicons/icons/uil-github"
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Footer = () => {
+    const { darkMode } = useThemeContext();
   return (
-    <div className="footer">
+    <div className="footer" style={{opacity: darkMode && .2}}>
         <img src={Wave} alt="" className="footerWave"/>
         <div className="f-content">
             <span>Easkew81@yahoo.com</span>

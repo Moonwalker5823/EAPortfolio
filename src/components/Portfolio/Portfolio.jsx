@@ -4,12 +4,14 @@ import Beamql from "../../Img/beamql.jpeg"
 import Digiheart from "../../Img/Digiheart.png"
 import Mpf from "../../Img/MPFormReact.png"
 import 'swiper/css';
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Portfolio = () => {
+  const { darkMode } = useThemeContext();
   return (
     <div className="portfolio">
       {/*heading*/}
-      <span>Recent Projects</span>
+      <span style={{color: darkMode && "white"}}>Recent Projects</span>
       <span>Portfolio</span>
 
       {/*Slides*/}

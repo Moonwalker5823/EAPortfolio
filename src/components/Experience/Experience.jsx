@@ -1,6 +1,8 @@
 import "./Experience.css"
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Experience = () => {
+  const { darkMode } = useThemeContext();
   return (
     <div className="experience">
       <div className="achievement">

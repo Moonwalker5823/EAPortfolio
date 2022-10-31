@@ -7,10 +7,19 @@ import Portfolio from './components/Portfolio/Portfolio';
 import Testimonial from './components/Testimonals/Testimonial';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import useThemeContext from './Hooks/useThemeContext';
 
 function App() {
+  const { darkMode } = useThemeContext();
+
+
   return (
-    <div className="App">
+    <div className="App" 
+      style={{
+      background : darkMode && "black",
+      color : darkMode && "white"
+      }}
+      >
        <Navbar/>
        <Intro/>
        <Services/>

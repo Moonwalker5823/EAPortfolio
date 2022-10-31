@@ -11,14 +11,18 @@ import Music from "../../Img/music.jpeg"
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
 import Car from "../../Img/car.png"
 import CV from "./CV.docx"
+import useThemeContext from "../../Hooks/useThemeContext";
 
 const Intro = () => {
+
+    const { darkMode } = useThemeContext();
+
   return (
     <div className="intro">
         <div className="i-left">
             <div className="i-name">
-                <span>Hello! I am </span>
-                <span>Eric Askew </span>
+                <span style={{color: darkMode && "white"}}>Hello! I am </span>
+                <span >Eric Askew </span>
                 <span>A dedicated Software Engineer with a passion for frontend technology & design.</span>
             </div>
        
