@@ -38,6 +38,7 @@
     border: 7px solid var(--blueCard);
     box-shadow: var(--boxShadow);
     border-radius: 20px;
+    cursor: pointer;
 }
 .testimonial {
     display: flex;

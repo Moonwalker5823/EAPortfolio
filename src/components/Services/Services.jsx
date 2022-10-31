@@ -5,12 +5,14 @@ import Wink from "../../Img/winkemoji.png"
 import Card from "../Card/Card"
 import Resume from "./EricResume.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
+import { motion } from "framer-motion"
 
 const Services = () => {
     const { darkMode } = useThemeContext();
+    const transition = {duration: '2', type: "spring", bounce: .5}
 
   return (
-    <div className="services">
+    <div className="services" id="Services">
         {/*Left */}
         <div className="service">
             <span style={{color: darkMode && "white"}}>My Services</span>
@@ -27,7 +29,12 @@ const Services = () => {
                 <div className="blur s-blur1" style={{background: "#409FF6"}}></div>
         </div>
         {/*Right */}
-        <div className="cards">
+        <motion.div 
+            whileInView={{left: "5rem"}}
+            initial={{left: "30%"}}
+            transition={transition}
+            className="cards"
+        >
             <div className="l-card">
                 <Card 
                     emoji= {Cool}
@@ -53,7 +60,7 @@ const Services = () => {
                     site="https://mui.com/"
                 />
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }

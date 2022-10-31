@@ -7,7 +7,7 @@ import useThemeContext from "../../Hooks/useThemeContext";
 const Footer = () => {
     const { darkMode } = useThemeContext();
   return (
-    <div className="footer" style={{opacity: darkMode && .2}}>
+    <div className="footer" style={{opacity: darkMode && .2}} id="Footer">
         <img src={Wave} alt="" className="footerWave"/>
         <div className="f-content">
             <span>Easkew81@yahoo.com</span>

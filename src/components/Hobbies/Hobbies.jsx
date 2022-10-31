@@ -5,12 +5,14 @@ import Nfl from "../../Img/FootballPic.png"
 import Xbox from "../../Img/XboxPic.png"
 import Dogs from "../../Img/OnyxCody.jpeg"
 import useThemeContext from "../../Hooks/useThemeContext";
+import { motion } from "framer-motion"
+import {Link} from "react-scroll"
 
 
 const Hobbies = () => {
   const { darkMode } = useThemeContext();
   return (
-    <div className="hobbies">
+    <div className="hobbies" id="Hobbies">
       {/*left */}
      <div className="hobby">
             <span style={{color: darkMode && "white"}}>My Hobbies</span>
@@ -18,13 +20,20 @@ const Hobbies = () => {
             <span>Avid sports fan (Giants, Bulls, Mets)<br/>Gamer (X-Box)</span>
             <span>Music (Audio Engineer)</span>
             <span>Coding of course 😎</span>
-                  <button className="button s-button">Contact Me</button>
+                  <Link spy={true} smooth={true} to="Contact">
+                  <button className="button s-button">Contact Me</button></Link>
                 <div className="blur h-blur1" style={{background: "#409FF6"}}></div>
                 <div className="blur h-blur2" style={{background: "#EC5B6C"}}></div>
         </div>
         {/*right */}
         <div className="h-right">
-          <div className="h-mainCircle">
+          <motion.div 
+            initial={{ rotate: 90 }}
+            whileInView={{ rotate: 0 }}
+            viewport={{ margin: "-40px" }}
+            transition={{ duration: 3.5, type: "spring" }}
+            className="h-mainCircle"
+          >
             <div className="h-secCircle">
               <img src={Nba} alt="Nba" />
             </div>
@@ -40,7 +49,7 @@ const Hobbies = () => {
             <div className="h-secCircle">
               <img src={Xbox} alt="Xbox" />
             </div>
-          </div>
+          </motion.div>
           <div className="h-backgroundImg blueCircle"></div>
           <div className="h-backgroundImg redCircle"></div>
         </div>

@@ -9,7 +9,7 @@ import useThemeContext from "../../Hooks/useThemeContext";
 const Portfolio = () => {
   const { darkMode } = useThemeContext();
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="Portfolio">
       {/*heading*/}
       <span style={{color: darkMode && "white"}}>Recent Projects</span>
       <span>Portfolio</span>

@@ -46,7 +46,7 @@ const Testimonial = () => {
   ];
 
   return (
-   <div className="t-wrapper">
+   <div className="t-wrapper" id="Testimonial">
       <div className="t-heading">
         <span>Track record of excellence </span><br/>
         <span>with clients and fellow professionals</span>

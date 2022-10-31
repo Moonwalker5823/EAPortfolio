@@ -12,10 +12,11 @@ import FloatingDiv from '../FloatingDiv/FloatingDiv'
 import Car from "../../Img/car.png"
 import CV from "./CV.docx"
 import useThemeContext from "../../Hooks/useThemeContext";
+import { motion } from "framer-motion"
 
 const Intro = () => {
-
     const { darkMode } = useThemeContext();
+    const transition = {duration: 2, type: "spring", bounce: .6}
 
   return (
     <div className="intro">
@@ -42,17 +43,34 @@ const Intro = () => {
         <div className="i-right">
             <img className="introColor"src={Music} alt="MusicbackgrondImage"/>
             <img src={Me} alt="MyPicture" />
-            <div className='i-rightFloatingDiv'>
+            <motion.div 
+                initial={{left: "-26%"}}
+                whileInView={{left: "-0%"}}
+                transition={transition}
+                className='i-rightFloatingDiv'
+                
+                >
                 <img src={Football} alt="" />
                 <img src={VidGame} alt="" />
                 <img src={Car} alt="" />
-            </div>
-            <div style={{top: '-4%', left: '60%'}}>
-                <FloatingDiv image={DogHeart} txt1="Web" txt2="Developer"/>
-            </div>
-            <div style={{top: '18rem', left: '0rem'}}>
+            </motion.div>
+            <motion.div 
+                initial={{top: "-4%", left: "74%"}}
+                whileInView={{left: "55%"}}
+                transition={transition}
+                style={{top: '-4%', left: '60%'}}
+            >
+                <FloatingDiv 
+                    image={DogHeart} txt1="Web" txt2="Developer"/>
+            </motion.div>
+            <motion.div 
+                initial={{left: "9rem", top: "18rem"}}
+                whileInView={{left: "0rem",top: "20rem"}}
+                transition={transition}
+                style={{top: '18rem', left: '0rem'}}
+            >
                 <FloatingDiv image={BasketBall} txt1="Responsive" txt2="Design"/>
-            </div>
+            </motion.div>
             <div className="blur" style={{background: '#409FF6'}}></div>
             <div className="blur2" style={{background: '#EC5B6C'}}></div>
         </div>
