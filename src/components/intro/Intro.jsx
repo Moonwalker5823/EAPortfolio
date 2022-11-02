@@ -2,6 +2,7 @@ import React from 'react'
 import "./Intro.css"
 import Github from "../../assets/Img/github.png"
 import Linkedin from "../../assets/Img/linkedin.png"
+import YouTube from "../../assets/Img/youTube2.png"
 import BasketBall from "../../assets/Img/basketball.png"
 import Football from "../../assets/Img/football.png"
 import VidGame from "../../assets/Img/2k.png"
@@ -37,6 +38,9 @@ const Intro = () => {
             </a>
             <a className="linkedinTag" href="https://www.linkedin.com/in/eric-askew-8a91714a/" target="_blank" rel="noopener noreferrer">
             <img src={Linkedin} alt="LinkedIn" />
+            </a>
+            <a className="YouTubeTag" href="https://www.youtube.com/watch?v=ReZv011cCu0" target="_blank" rel="noopener noreferrer">
+            <img src={YouTube} alt="YouTube" />
             </a>
         </div>
         </div>

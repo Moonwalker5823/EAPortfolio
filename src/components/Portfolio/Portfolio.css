@@ -4,6 +4,7 @@
     justify-content: center;
     flex-direction: column;
     height: 90vh;
+    margin: 1rem auto;
 }
 .portfolio span:nth-child(1) {
     color: var(--black);
@@ -52,13 +53,12 @@
     color: var(--gray);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px)  {
     .portfolio {
         height: 50rem;
     }
     .portfolio-slider {
         transform: scale(.8);
     }
-   
-}
 
+}
