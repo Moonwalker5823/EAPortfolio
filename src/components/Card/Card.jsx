@@ -3,7 +3,7 @@ import "./Card.css"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 
-const Card = ({emoji, text, detail, site}) => {
+const Card = ({emoji, text, detail}) => {
 
   const { darkMode } = useThemeContext();
   return (
@@ -11,9 +11,6 @@ const Card = ({emoji, text, detail, site}) => {
         <img src={emoji} alt={emoji}/>
         <span>{text}</span>
         <span style={{color: darkMode && "white"}}>{detail}</span>
-        <a href={site} alt="text">
-        <button className="c-button">Learn More</button>
-        </a>
     </div>
   )
 }

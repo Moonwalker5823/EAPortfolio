@@ -32,7 +32,14 @@
     filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
     border-radius: 19px;
 }
-
+.p-blur1 {
+    left: -2rem
+}
+.p-blur2 {
+    top: 13rem;
+    left: 2rem;
+    z-index: -1
+}
 .swiperSlide{
     display: flex;
     flex-direction: column;

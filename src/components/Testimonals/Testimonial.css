@@ -53,8 +53,8 @@
     height: 8rem;
     border-radius: 100%;
 }
-.testimonial>span {
-    color: var(--gray);
+.testimonial > span:nth-child(2) {
+    color: var(--blue);
     margin-top: 1rem;
 }
 .testimonial>p {

@@ -1,16 +1,16 @@
 import React from 'react'
 import "./Intro.css"
-import Github from "../../Img/github.png"
-import Linkedin from "../../Img/linkedin.png"
-import BasketBall from "../../Img/basketball.png"
-import Football from "../../Img/football.png"
-import VidGame from "../../Img/2k.png"
-import DogHeart from "../../Img/dogheart.png"
-import Me from "../../Img/Me.jpeg"
-import Music from "../../Img/music.jpeg"
+import Github from "../../assets/Img/github.png"
+import Linkedin from "../../assets/Img/linkedin.png"
+import BasketBall from "../../assets/Img/basketball.png"
+import Football from "../../assets/Img/football.png"
+import VidGame from "../../assets/Img/2k.png"
+import DogHeart from "../../assets/Img/dogheart.png"
+import Me from "../../assets/Img/Me1.png"
+import Music from "../../assets/Img/music.jpeg"
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
-import Car from "../../Img/car.png"
-import CV from "./CV.docx"
+import Car from "../../assets/Img/car.png"
+import CV from "../../assets/CoverLetter.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 
@@ -19,7 +19,7 @@ const Intro = () => {
     const transition = {duration: 2, type: "spring", bounce: .6}
 
   return (
-    <div className="intro">
+    <div className="intro" id="intro">
         <div className="i-left">
             <div className="i-name">
                 <span style={{color: darkMode && "white"}}>Hello! I am </span>
@@ -29,13 +29,13 @@ const Intro = () => {
        
         <a  className="buttonTag" href={CV
         } download>
-            <button className="button i-button" type='submit' alt="Resume">Download CV</button>
+            <button className="button i-button" type='submit' alt="Resume" style={{border: darkMode && "2px solid white"}}>Download CV</button>
         </a>
         <div className="i-icons">
-            <a className="gitTag" href="https://github.com/Moonwalker5823">
-            <img src={Github} alt="Github" />
+            <a className="gitTag" href="https://github.com/Moonwalker5823" target="_blank" rel="noopener noreferrer">
+            <img src={Github} alt="Github"/>
             </a>
-            <a className="linkedinTag" href="https://www.linkedin.com/in/eric-askew-8a91714a/">
+            <a className="linkedinTag" href="https://www.linkedin.com/in/eric-askew-8a91714a/" target="_blank" rel="noopener noreferrer">
             <img src={Linkedin} alt="LinkedIn" />
             </a>
         </div>
@@ -57,7 +57,7 @@ const Intro = () => {
 
             <motion.div 
                 initial={{top: "-4%", left: "74%"}}
-                whileInView={{left: "55%"}}
+                whileInView={{left: "35%"}}
                 transition={transition}
                 style={{top: '-4%', left: '60%'}}
                 className="floating-div"

@@ -1,9 +1,9 @@
 import "./Hobbies.css"
-import Nba from "../../Img/NbaPic.png"
-import Audio from "../../Img/AudioPic.jpeg"
-import Nfl from "../../Img/FootballPic.png"
-import Xbox from "../../Img/XboxPic.png"
-import Dogs from "../../Img/OnyxCody.jpeg"
+import Nba from "../../assets/Img/NbaPic.png"
+import Audio from "../../assets/Img/AudioPic.jpeg"
+import Nfl from "../../assets/Img/FootballPic.png"
+import Xbox from "../../assets/Img/XboxPic.png"
+import Dogs from "../../assets/Img/OnyxCody.jpeg"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 import {Link} from "react-scroll"
@@ -21,7 +21,7 @@ const Hobbies = () => {
             <span>Music (Audio Engineer)</span>
             <span>Coding of course 😎</span>
                   <Link spy={true} smooth={true} to="Contact">
-                  <button className="button s-button">Contact Me</button></Link>
+                  <button className="button s-button" style={{border: darkMode && "2px solid white"}}>Contact Me</button></Link>
                 <div className="blur h-blur1" style={{background: "#409FF6"}}></div>
                 <div className="blur h-blur2" style={{background: "#EC5B6C"}}></div>
         </div>
@@ -33,6 +33,7 @@ const Hobbies = () => {
             viewport={{ margin: "-40px" }}
             transition={{ duration: 3.5, type: "spring" }}
             className="h-mainCircle"
+            style={{background: darkMode && "lightgray"}}
           >
             <div className="h-secCircle">
               <img src={Nba} alt="Nba" />

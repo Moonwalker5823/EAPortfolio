@@ -1,8 +1,8 @@
 import "./Portfolio.css"
 import { Swiper, SwiperSlide } from "swiper/react"
-import Beamql from "../../Img/beamql.jpeg"
-import Digiheart from "../../Img/Digiheart.png"
-import Mpf from "../../Img/MPFormReact.png"
+import Beamql from "../../assets/Img/beamql.jpeg"
+import Digiheart from "../../assets/Img/Digiheart.png"
+import Mpf from "../../assets/Img/MPFormReact.png"
 import 'swiper/css';
 import useThemeContext from "../../Hooks/useThemeContext";
 
@@ -13,7 +13,7 @@ const Portfolio = () => {
       {/*heading*/}
       <span style={{color: darkMode && "white"}}>Recent Projects</span>
       <span>Portfolio</span>
-
+      <div className="blur p-blur1" style={{background: "#409FF6"}}></div>
       {/*Slides*/}
       <Swiper 
         spaceBetween={50}
@@ -37,6 +37,7 @@ const Portfolio = () => {
           <span>Digital Keepsake for Precious Memories</span>
         </SwiperSlide>
       </Swiper>
+      <div className="blur p-blur2" style={{background: "#EC5B6C"}}></div>
     </div>
   )
 }
