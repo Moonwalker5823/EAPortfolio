@@ -21,6 +21,7 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    z-index: 2;
 }
 .c-right .user {
     width: 20rem;
@@ -36,14 +37,13 @@ textarea {
     height: 4rem!important;
 }
 
-
 .c-blur1 {
     top: 15rem;
     left: -10rem;
 }
 .c-blur2 {
     top: -5rem;
-    left: 15rem;
+    left: 25rem;
 }
 
 @media screen and (max-width: 480px) {

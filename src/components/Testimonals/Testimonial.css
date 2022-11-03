@@ -19,7 +19,7 @@
     color: var(--blue);
 }
 .t-blur1 {
-    left: 38rem;
+    left: 58rem;
     top: 16rem
 }
 .t-blur2 {
@@ -38,7 +38,7 @@
     border: 7px solid var(--blueCard);
     box-shadow: var(--boxShadow);
     border-radius: 20px;
-    cursor: pointer;
+    cursor: grab;
 }
 .testimonial {
     display: flex;
@@ -61,10 +61,10 @@
     color: var(--black);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
     .t-wrapper{
         margin-top: 20rem;
-        padding: 0;
+        padding: 1rem;
         left: -1.5rem;
         height: 50rem;
         margin: 0 auto;

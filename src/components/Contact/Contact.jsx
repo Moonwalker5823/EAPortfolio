@@ -23,10 +23,10 @@ const Contact = () => {
                 <textarea type="textarea" name="message" placeholder="Message" cols="30" rows="10" className="user" style={{background: darkMode && "lightgray"}}></textarea>
                 <input type="submit" onClick={()=> setdone(!done)}value="Send" className="button" style={{border: darkMode && "2px solid whitesmoke"}}/>
                 <span>{done && "Thank You for contacting Me!"}</span>
-                <div className="blur c-blur1" style={{background: "#409FF6"}}></div>
-                <div className="blur c-blur2" style={{background: "#EC5B6C"}}></div>
                 <input type="hidden" name="_autoresponse" value="Thank You! for contacting Eric Askew.  I will respond shortly."></input>
             </form>
+            <div className="blur c-blur1" style={{background: "#409FF6"}}></div>
+                <div className="blur c-blur2" style={{background: "#EC5B6C"}}></div>
         </div>
     </div>
   )

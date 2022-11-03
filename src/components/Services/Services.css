@@ -39,14 +39,17 @@
 }
 .l-card {
     left: 10rem;
+    z-index: 2;
 }
 .r-card {
     top: 15rem;
     right: 10rem;
+    z-index: 2;
 }
 .m-card {
     top: 23rem;
     left: 8rem;
+    z-index: 2;
 }
 .cards {
     position: relative;
@@ -58,11 +61,13 @@
 }
 
 .s-blur1 {
-    left: 2rem
+    left: 2rem;
+    top: 20rem;
+    z-index: 0;
 }
 .s-blur2 {
     top: 13rem;
-    left: 2rem
+    left: -12rem
 }
 
 @media  screen and (max-width: 680px) {
@@ -80,9 +85,6 @@
     }
     .cards>* {
        position: static; 
-    }
-    .s-blur2 {
-        display: none;
     }
    
 }

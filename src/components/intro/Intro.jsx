@@ -28,7 +28,7 @@ const Intro = () => {
                 <span>A dedicated Software Engineer with a passion for frontend technology & design.</span>
             </div>
        
-        <a  className="buttonTag" href={CV
+        <a className="buttonTag" href={CV
         } download>
             <button className="button i-button" type='submit' alt="Resume" style={{border: darkMode && "2px solid white"}}>Download CV</button>
         </a>
@@ -46,12 +46,12 @@ const Intro = () => {
         </div>
         <div className="i-right">
             <img className="introColor"src={Music} alt="MusicbackgrondImage"/>
-            <img src={Me} alt="MyPicture" />
+            <img style={{filter: darkMode && "brightness(65%)"}} src={Me} alt="MyPicture" />
             <motion.div 
                 initial={{left: "-26%"}}
                 whileInView={{left: "-0%"}}
                 transition={transition}
-                className='i-rightFloatingDiv floating-div'
+                className='floating-div'
                 
                 >
                 <img src={Football} alt="" />
@@ -61,7 +61,7 @@ const Intro = () => {
 
             <motion.div 
                 initial={{top: "-4%", left: "74%"}}
-                whileInView={{left: "35%"}}
+                whileInView={{left: "50%"}}
                 transition={transition}
                 style={{top: '-4%', left: '60%'}}
                 className="floating-div"
