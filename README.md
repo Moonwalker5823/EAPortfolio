@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Eric Askew</h1>
+<h1 align="center">Hello 👋, I'm Eric Askew</h1>
 <h3 align="center">A passionate Software engineer who loves front-end development. I'm very excited to share my personal portfolio. Thank you for taking the time to get to know more about me!!!!</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=moonwalker5823&label=Profile%20views&color=0e75b6&style=flat" alt="moonwalker5823" /> </p>

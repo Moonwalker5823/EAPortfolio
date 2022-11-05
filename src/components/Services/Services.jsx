@@ -42,8 +42,6 @@ const Services = () => {
                     detail={"Figma, Sketch, Photoshop, Excalidraw"}
                 />
             </motion.div>
-
-            <div className="blur s-blur2" style={{background: "#EC5B6C"}}></div>
             <motion.div 
                 initial={{ left: "-35rem", top: "12rem" }}
                 whileInView={{ left: "-20rem" }}
@@ -66,6 +64,7 @@ const Services = () => {
                 />
             </motion.div>
         </div>
+        <div className="blur s-blur2" style={{background: "#EC5B6C"}}></div>
     </div>
   )
 }
