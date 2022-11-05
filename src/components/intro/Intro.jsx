@@ -1,17 +1,17 @@
 import React from 'react'
 import "./Intro.css"
-import Github from "../../assets/Img/github.png"
-import Linkedin from "../../assets/Img/linkedin.png"
-import YouTube from "../../assets/Img/youTube2.png"
-import BasketBall from "../../assets/Img/basketball.png"
-import Football from "../../assets/Img/football.png"
-import VidGame from "../../assets/Img/2k.png"
-import DogHeart from "../../assets/Img/dogheart.png"
-import Me from "../../assets/Img/Me1.png"
-import Music from "../../assets/Img/music.jpeg"
+import Github from "../../Assets/Img/github.png"
+import Linkedin from "../../Assets/Img/linkedin.png"
+import YouTube from "../../Assets/Img/youTube2.png"
+import BasketBall from "../../Assets/Img/basketball.png"
+import Football from "../../Assets/Img/football.png"
+import VidGame from "../../Assets/Img/2k.png"
+import DogHeart from "../../Assets/Img/dogheart.png"
+import Me from "../../Assets/Img/Me1.png"
+import Music from "../../Assets/Img/music.jpeg"
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
-import Car from "../../assets/Img/car.png"
-import CV from "../../assets/CoverLetter.pdf"
+import Car from "../../Assets/Img/car.png"
+import CV from "../../Assets/CoverLetter.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 

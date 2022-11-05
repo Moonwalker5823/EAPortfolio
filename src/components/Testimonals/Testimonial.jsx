@@ -1,10 +1,10 @@
 import "./Testimonial.css"
 import { Swiper, SwiperSlide } from "swiper/react"
-import Konstantin from "../../assets/Img/KonstantineHamilton.jpeg"
-import ProfilePic2 from "../../assets/Img/Profile2.jpeg"
-import ProfilePic3 from "../../assets/Img/Profile3.jpeg"
-import ProfilePic4 from "../../assets/Img/Profile4.jpeg"
-import Brian from "../../assets/Img/Brian.png"
+import Konstantin from "../../Assets/Img/KonstantineHamilton.jpeg"
+import ProfilePic2 from "../../Assets/Img/Profile2.jpeg"
+import ProfilePic3 from "../../Assets/Img/Profile3.jpeg"
+import ProfilePic4 from "../../Assets/Img/Profile4.jpeg"
+import Brian from "../../Assets/Img/Brian.png"
 import { Pagination } from "swiper"
 import 'swiper/css/pagination'
 import 'swiper/css'

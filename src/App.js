@@ -1,12 +1,12 @@
-import Navbar from './components/Navbar/Navbar';
-import Intro from './components/Intro/Intro';
-import Services from './components/Services/Services';
-import Experience from './components/Experience/Experience';
-import Work from './components/Hobbies/Hobbies';
-import Portfolio from './components/Portfolio/Portfolio';
-import Testimonial from './components/Testimonals/Testimonial';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar';
+import Intro from './Components/Intro/Intro';
+import Services from './Components/Services/Services';
+import Experience from './Components/Experience/Experience';
+import Work from './Components/Hobbies/Hobbies';
+import Portfolio from './Components/Portfolio/Portfolio';
+import Testimonial from './Components/Testimonals/Testimonial';
+import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer/Footer';
 import useThemeContext from './Hooks/useThemeContext';
 
 function App() {

@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Card.css"
 import useThemeContext from "../../Hooks/useThemeContext";
-import { motion } from "framer-motion"
 
 const Card = ({emoji, text, detail}) => {
 
