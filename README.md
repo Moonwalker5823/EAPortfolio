@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=moonwalker5823" alt="moonwalker5823" /></a> </p>
 
-- 🔭 I’m currently working on [beamql](https://beamql.com/)
+- 🔭 I’m currently working at [beamql](https://beamql.com/)
 
 - 👨‍💻 All of my projects are available at [Github/moonwalker5823](Github/moonwalker5823)
 
