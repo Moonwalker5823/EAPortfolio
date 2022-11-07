@@ -1,7 +1,7 @@
 import "./Testimonial.css"
 import { Swiper, SwiperSlide } from "swiper/react"
-import Konstantin from "../../assets/Img/KonstantineHamilton.jpeg"
-import Brian from "../../assets/Img/Brian.png"
+import Konstantin from "../../Assets/Img/KonstantineHamilton.jpeg"
+import Brian from "../../Assets/Img/Brian.png"
 import { Pagination } from "swiper"
 import 'swiper/css/pagination'
 import 'swiper/css'
@@ -17,8 +17,9 @@ const Testimonial = () => {
       name: "Konstatin Hamilton", 
       review: "Eric's grasp of algorithmic concepts and design patterns make him a privilege to work with. He is a talented, driven, and empathetic engineer with deep expertise, particularly in node and react."
     },
+    
     {
-      id: 5,
+      id: 2,
       img: Brian, 
       name: "Brian Grosso",
       title: "Sr. Engineer Capital One",

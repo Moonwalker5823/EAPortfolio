@@ -43,7 +43,7 @@
     height: 25rem;
     border-radius: 100%;
     box-shadow: var(--boxShadow);
-    top: 18rem;
+    top: 20rem;
     background: white;
     z-index: 2;
 }

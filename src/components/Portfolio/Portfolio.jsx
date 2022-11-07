@@ -1,8 +1,8 @@
 import "./Portfolio.css"
 import { Swiper, SwiperSlide } from "swiper/react"
-import Beamql from "../../assets/Img/beamql.jpeg"
-import Digiheart from "../../assets/Img/Digiheart.png"
-import Mpf from "../../assets/Img/MPFormReact.png"
+import Beamql from "../../Assets/Img/beamql.jpeg"
+import Digiheart from "../../Assets/Img/Digiheart.png"
+import Mpf from "../../Assets/Img/MPFormReact.png"
 import 'swiper/css';
 import useThemeContext from "../../Hooks/useThemeContext";
 

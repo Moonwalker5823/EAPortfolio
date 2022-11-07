@@ -1,9 +1,9 @@
 import "./Services.css"
-import Cool from "../../assets/Img/coolemoji.png"
-import Smile from "../../assets/Img/smileemoji.png"
-import Wink from "../../assets/Img/winkemoji.png"
+import Cool from "../../Assets/Img/coolemoji.png"
+import Smile from "../../Assets/Img/smileemoji.png"
+import Wink from "../../Assets/Img/winkemoji.png"
 import Card from "../Card/Card"
-import Resume from "../../assets/EricResume.pdf"
+import Resume from "../../Assets/EricResume.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 
