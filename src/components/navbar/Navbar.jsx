@@ -4,7 +4,6 @@ import {Link} from "react-scroll"
 import useThemeContext from "../../Hooks/useThemeContext";
 
 const Navbar = () => {
-
     const { darkMode } = useThemeContext();
 
   return (
