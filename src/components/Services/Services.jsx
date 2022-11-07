@@ -32,7 +32,7 @@ const Services = () => {
         <div className="cards">
 
             <motion.div 
-             initial={{ left: "15rem" }}
+             initial={{ left: "10rem" }}
              whileInView={{ left: "-2rem" }}
              transition={transition}
              className="l-card">
@@ -43,7 +43,7 @@ const Services = () => {
                 />
             </motion.div>
 
-            <div className="blur s-blur2" style={{background: "#EC5B6C"}}></div>
+            
             <motion.div 
                 initial={{ left: "-35rem", top: "12rem" }}
                 whileInView={{ left: "-20rem" }}
@@ -65,7 +65,9 @@ const Services = () => {
                     detail={"Bootstrap, Material UI, Emotion "}
                 />
             </motion.div>
+            <div className="blur s-blur2" style={{background: "#EC5B6C"}}></div>
         </div>
+        
     </div>
   )
 }

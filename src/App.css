@@ -16,7 +16,6 @@
   padding: .5rem, 3.5rem;
   overflow: hidden;
   color: var(--black);
-  margin: 0 ;
 }
 
 .button {
@@ -39,5 +38,6 @@
 @media  screen and (max-width: 480px) {
   .App {
     padding: .5rem 1rem;
+    width: 22em
   }
 }

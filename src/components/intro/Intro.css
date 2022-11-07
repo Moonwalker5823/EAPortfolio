@@ -114,9 +114,9 @@
     .i-right{
         transform: scale(.8);
         top: -8rem;
-        left: 4rem;
         z-index: 0;
         position: relative;
+        
     }
     .i-right > img:nth-child(2) {
         top: -7rem;

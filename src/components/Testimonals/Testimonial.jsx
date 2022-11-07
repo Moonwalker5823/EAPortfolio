@@ -1,9 +1,6 @@
 import "./Testimonial.css"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Konstantin from "../../assets/Img/KonstantineHamilton.jpeg"
-import ProfilePic2 from "../../assets/Img/Profile2.jpeg"
-import ProfilePic3 from "../../assets/Img/Profile3.jpeg"
-import ProfilePic4 from "../../assets/Img/Profile4.jpeg"
 import Brian from "../../assets/Img/Brian.png"
 import { Pagination } from "swiper"
 import 'swiper/css/pagination'
@@ -19,27 +16,6 @@ const Testimonial = () => {
       title: "Software Engineer",
       name: "Konstatin Hamilton", 
       review: "Eric's grasp of algorithmic concepts and design patterns make him a privilege to work with. He is a talented, driven, and empathetic engineer with deep expertise, particularly in node and react."
-    },
-    {
-      id: 2,
-      img: ProfilePic2,
-      name: "Barack Obama", 
-      title: "Former President",
-      review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget aliquet. Laoreet suspendisse interdum consectetur libero."
-    },
-    {
-      id: 3,
-      img: ProfilePic3,
-      name: "Shawn Carter",
-      title: "Bussineess Man", 
-      review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit eget gravida cum sociis natoque."
-    },
-    {
-      id: 4,
-      img: ProfilePic4,
-      name: "Warren Buffet", 
-      title: "Money Mogul",
-      review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quam id leo in vitae turpis massa sed. Quam nulla porttitor massa id neque aliquam. Bibendum at varius vel pharetra vel. Suspendisse sed nisi lacus sed viverra tellus in hac."
     },
     {
       id: 5,
