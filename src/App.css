@@ -1,0 +1,75 @@
+html, body {
+  overflow-x: hidden;
+}
+
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
+  --purple: rgb(238 210 255);
+  --boxShadow: 0px 20px 63px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0,0,0,0.08);
+  --red: #ff0000;
+  --blue: #1d23fd;
+  --blue-dark: #1519cc;
+  --surface-dark: #121212;
+  --surface-dark-2: #1e1e1e;
+  --text-dark: #e8e8e8;
+  --border-dark: rgba(255,255,255,0.08);
+  --transition: all 0.25s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-dark);
+}
+
+.App {
+  overflow: hidden;
+  color: var(--black);
+  width: 100%;
+}
+
+.button {
+  border-radius: 34px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 32px;
+  box-shadow: 0px 8px 24px rgba(29, 35, 253, 0.3);
+  background: linear-gradient(135deg, var(--blue) 0%, #5B5FEE 100%);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.3px;
+}
+.button:hover {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, #4a4ecc 100%);
+  box-shadow: 0px 12px 28px rgba(29, 35, 253, 0.45);
+  transform: translateY(-1px);
+  color: white;
+}
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0px 4px 12px rgba(29, 35, 253, 0.3);
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    width: 100%;
+  }
+}

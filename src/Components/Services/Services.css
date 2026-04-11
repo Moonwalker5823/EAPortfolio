@@ -1,0 +1,136 @@
+.services {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    min-height: 70vh;
+    height: auto;
+    margin: 5rem auto;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 0 0 35%;
+    max-width: 35%;
+}
+
+.service > :nth-child(1) {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.service > :nth-child(2) {
+    color: var(--blue);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+.service > :nth-child(3) {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.25rem;
+}
+.service > :nth-child(4) {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.s-button {
+   width: auto;
+   height: 2.75rem;
+   margin-top: 1.5rem;
+   white-space: nowrap;
+}
+.service > a {
+    width: 20px;
+}
+.l-card {
+    left: 10rem;
+    z-index: 2;
+}
+.r-card {
+    top: 15rem;
+    left: 8rem;
+    z-index: 2;
+}
+.m-card {
+    top: 30rem;
+    left: 2rem;
+    z-index: 2;
+}
+.cards {
+    position: relative;
+    left: 20%;
+    top: 10%;
+    z-index: 1;
+}
+.cards > * {
+    position: relative;
+}
+
+.s-blur1 {
+    left: 2rem;
+    top: 20rem;
+    z-index: 0;
+}
+.s-blur2 {
+    top: 13rem;
+    left: -12rem;
+}
+
+@media screen and (max-width: 993px) {
+    .services {
+        flex-direction: column;
+        gap: 3rem;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+        padding: 1em;
+        margin: 0 auto;
+    }
+    .service {
+        max-width: 100%;
+        flex: unset;
+        align-items: center;
+    }
+    .service > a {
+        width: auto;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        position: static;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+    .cards > * {
+        position: static;
+    }
+    .cards .card {
+        position: relative;
+        width: 13rem;
+    }
+    .l-card, .r-card, .m-card {
+        left: 0;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services {
+        padding: 0.5rem;
+        margin-top: 20rem;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .s-blur1, .s-blur2 {
+        display: none;
+    }
+}

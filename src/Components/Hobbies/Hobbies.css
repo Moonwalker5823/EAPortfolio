@@ -1,0 +1,170 @@
+.hobbies {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 50rem;
+    margin-top: 2rem;
+}
+.hobby {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 45%;
+    flex-shrink: 0;
+}
+
+.hobby > span#Header {
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.hobby > span:not(#Header) {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 400;
+    line-height: 1.6;
+    white-space: pre-line;
+    margin-top: 0.25rem;
+}
+
+.h-blur1 {
+    top: 30rem;
+    left: 12rem;
+}
+.h-blur2 {
+    top: 2rem;
+    left: 42rem;
+}
+
+.h-right {
+    position: relative;
+    top: 2em;
+    left: 16em;
+    width: 50em;
+    transform: scale(0.78);
+    transform-origin: left center;
+}
+.h-mainCircle {
+    left: -7rem;
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 100%;
+    box-shadow: var(--boxShadow);
+    background: white;
+    z-index: 2;
+}
+
+.h-secCircle > img {
+    transform: scale(.5);
+    border-radius: 10%;
+}
+.h-mainCircle > :nth-child(1) {
+    top: -9rem;
+    left: 6rem;
+}
+.h-mainCircle > :nth-child(2) {
+    top: 5rem;
+    left: -9rem;
+}
+.h-mainCircle > :nth-child(3) {
+    top: 7rem;
+    left: 7rem;
+    transform: scale(.7);
+    background: whitesmoke;
+}
+.h-mainCircle > :nth-child(4) {
+    top: 6rem;
+    left: 23rem;
+}
+.h-mainCircle > :nth-child(5) {
+    top: 23rem;
+    left: 6rem;
+}
+.h-secCircle {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: var(--boxShadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.h-secCircle:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 24px 70px rgba(0, 0, 0, 0.15);
+}
+.h-backgroundImg {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+    z-index: 1;
+}
+.blueCircle {
+    background: rgba(29, 35, 253, 0.12);
+    left: -10rem;
+    top: 10rem;
+}
+.redCircle {
+    background: rgba(236, 91, 108, 0.12);
+    left: 5rem;
+    top: 19rem;
+}
+
+@media screen and (max-width: 962px) {
+    .hobbies {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+        padding: 1em;
+        gap: 2rem;
+        overflow-x: hidden;
+    }
+    .hobby {
+        max-width: 90%;
+        align-items: center;
+    }
+    .h-right {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 43rem;
+        top: 0;
+        left: 0;
+        transform: scale(0.55);
+        transform-origin: top center;
+        margin-bottom: -19rem;
+    }
+    .h-mainCircle {
+        left: 0;
+        flex-shrink: 0;
+        margin-top: 9rem;
+    }
+    .h-blur1, .h-blur2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hobbies {
+        padding: 0.5rem;
+    }
+    .hobby {
+        max-width: 100%;
+    }
+    .h-right {
+        transform: scale(0.42);
+        height: 43rem;
+        margin-bottom: -25rem;
+    }
+}

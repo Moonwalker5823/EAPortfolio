@@ -1,0 +1,147 @@
+.n-wrapper {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    z-index: 100;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+    box-sizing: border-box;
+    padding: 0 4rem;
+}
+
+.n-wrapper.dark {
+    background-color: rgba(18, 18, 18, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.n-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.n-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--blue);
+    letter-spacing: -0.3px;
+    transition: color 0.25s ease;
+}
+
+.n-wrapper.dark .n-name {
+    color: #6c70ff;
+}
+
+.n-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.n-toggle-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray);
+    transition: color 0.25s ease;
+}
+
+.n-wrapper.dark .n-toggle-label {
+    color: #aaa;
+}
+
+.n-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.n-list {
+    flex: 1;
+}
+
+.n-list > ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.n-list > ul > li {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--black);
+    transition: color 0.2s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.n-wrapper.dark .n-list > ul > li {
+    color: #d0d0d0;
+}
+
+.n-list > ul > li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--blue);
+    border-radius: 2px;
+    transition: width 0.2s ease;
+}
+
+.n-list > ul > li:hover {
+    color: var(--blue);
+}
+
+.n-list > ul > li:hover::after {
+    width: 100%;
+}
+
+.n-wrapper.dark .n-list > ul > li:hover {
+    color: #6c70ff;
+}
+
+.n-contact-btn {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1130px) {
+    .n-list {
+        display: none;
+    }
+    .n-toggle-label {
+        display: none;
+    }
+    .n-right {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .n-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .n-wrapper {
+        padding: 0 .5rem;
+    }
+    .n-name {
+        font-size: 1rem;
+    }
+}
