@@ -37,7 +37,7 @@ const Hobbies = () => {
             viewport={{ margin: "-40px" }}
             transition={{ duration: 3.5, type: "spring" }}
             className="h-mainCircle"
-            style={{background: darkMode && "lightgray"}}
+            style={{background: "var(--blue)"}}
           >
             <div className="h-secCircle">
               <img src={Nba} alt="Nba" />

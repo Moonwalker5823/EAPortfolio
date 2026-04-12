@@ -15,6 +15,8 @@ import CV from "../../Assets/Eric_Askew_Cover_Letter_2026.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 
+const blueFilter = "brightness(0) saturate(100%) invert(66%) sepia(21%) saturate(469%) hue-rotate(201deg) brightness(104%)"
+
 const Intro = () => {
     const { darkMode } = useThemeContext();
     const transition = {duration: 2, type: "spring", bounce: .6}
@@ -42,10 +44,10 @@ const Intro = () => {
             </a>
             <div className="i-icons">
                 <a className="gitTag" href="https://github.com/Moonwalker5823" target="_blank" rel="noopener noreferrer">
-                <img src={Github} alt="Github"/>
+                <img src={Github} alt="Github" style={{filter: blueFilter}}/>  
                 </a>
                 <a className="linkedinTag" href="https://www.linkedin.com/in/easkew51/" target="_blank" rel="noopener noreferrer">
-                <img src={Linkedin} alt="LinkedIn" />
+                <img src={Linkedin} alt="LinkedIn" style={{filter: blueFilter}}/> 
                 </a>
             </div>
         </div>
@@ -65,9 +67,9 @@ const Intro = () => {
                 className='floating-div'
                 
                 >
-                <img src={Football} alt="" />
-                <img src={VidGame} alt="" />
-                <img src={Car} alt="" />
+                <img src={Football} alt="" style={{filter: blueFilter }} />
+                <img src={VidGame} alt="" style={{filter: blueFilter}} />
+                <img src={Car} alt="" style={{filter: blueFilter}} />
             </motion.div>
 
             {/* Web Dev Floating Tab */}
@@ -78,8 +80,8 @@ const Intro = () => {
                 style={{top: '-4%', left: '60%'}}
                 className="floating-div"
             >
-                <FloatingDiv 
-                    image={DogHeart} txt1="Web" txt2="Developer"/>
+                <FloatingDiv
+                    image={DogHeart} txt1="Web" txt2="Developer" imgStyle={{filter: !darkMode ? blueFilter : undefined}}/>
             </motion.div>
 
             {/* Responsive Design Floating Tab */}
@@ -94,7 +96,7 @@ const Intro = () => {
                 style={isMobile ? {top: '9rem', left: '-4rem'} : {top: '18rem', left: '0rem'}}
                 className="floating-div"
             >
-                <FloatingDiv image={BasketBall} txt1="Responsive" txt2="Design"/>
+                <FloatingDiv image={BasketBall} txt1="Responsive" txt2="Design" imgStyle={{filter: !darkMode ? blueFilter : undefined}}/>
             </motion.div>
 
             {/* Scalable Systems Floating Tab */}
@@ -112,7 +114,7 @@ const Intro = () => {
                     imgStyle={{
                         height: '2.5rem',
                         width: 'auto',
-                        filter: 'brightness(0) saturate(100%) invert(12%) sepia(100%) saturate(6000%) hue-rotate(237deg) brightness(105%)'
+                        filter: !darkMode ? blueFilter : undefined,
                     }}
                 />
             </motion.div>
