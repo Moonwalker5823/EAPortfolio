@@ -1,8 +1,8 @@
 import "./Contact.css"
 import { useState } from "react"
 import useThemeContext from "../../Hooks/useThemeContext";
-import Onyx from "../../Assets/Img/Onyx.jpg"
-import Cody from "../../Assets/Img/Cody.jpg"
+import Onyx from "../../Assets/img/Onyx.jpg"
+import Cody from "../../Assets/img/Cody.jpg"
 
 const Contact = () => {
     const [done, setdone] = useState(false);

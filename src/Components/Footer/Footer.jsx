@@ -1,5 +1,5 @@
 import "./Footer.css"
-import Wave from "../../Assets/Img/musicWave.jpeg"
+import Wave from "../../Assets/img/musicWave.jpeg"
 import Github from "@iconscout/react-unicons/icons/uil-github"
 import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin"
 import useThemeContext from "../../Hooks/useThemeContext";
