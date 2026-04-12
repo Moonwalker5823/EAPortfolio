@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Intro.css"
 import Github from "../../Assets/img/github.png"
 import Linkedin from "../../Assets/img/linkedin.png"
@@ -18,6 +18,14 @@ import { motion } from "framer-motion"
 const Intro = () => {
     const { darkMode } = useThemeContext();
     const transition = {duration: 2, type: "spring", bounce: .6}
+    const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 962px)').matches);
+
+    useEffect(() => {
+        const mq = window.matchMedia('(max-width: 962px)');
+        const handler = (e) => setIsMobile(e.matches);
+        mq.addEventListener('change', handler);
+        return () => mq.removeEventListener('change', handler);
+    }, []);
 
   return (
     <div className="intro" id="intro">
@@ -75,11 +83,15 @@ const Intro = () => {
             </motion.div>
 
             {/* Responsive Design Floating Tab */}
-            <motion.div 
-                initial={{left: "9rem", top: "18rem"}}
-                whileInView={{left: "0rem", top: "20rem"}}
-                transition={transition}
-                style={{top: '18rem', left: '0rem'}}
+            <motion.div
+                key={isMobile ? 'responsive-mobile' : 'responsive-desktop'}
+                initial={isMobile ? {left: "-4rem", top: "9rem"} : {left: "9rem", top: "18rem"}}
+                {...(isMobile
+                    ? { animate: {left: "-4rem", top: "9rem"} }
+                    : { whileInView: {left: "0rem", top: "20rem"} }
+                )}
+                transition={isMobile ? {duration: 0} : transition}
+                style={isMobile ? {top: '9rem', left: '-4rem'} : {top: '18rem', left: '0rem'}}
                 className="floating-div"
             >
                 <FloatingDiv image={BasketBall} txt1="Responsive" txt2="Design"/>
