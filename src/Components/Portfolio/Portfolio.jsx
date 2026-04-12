@@ -1,8 +1,8 @@
 import "./Portfolio.css"
-import Beamql from "../../Assets/Img/beamql.jpeg"
-import Digiheart from "../../Assets/Img/Digiheart.png"
-import Mpf from "../../Assets/Img/MPFormReact.png"
-import TruckStar from "../../Assets/Img/TruckStar.png"
+import Beamql from "../../Assets/img/beamql.jpeg"
+import Digiheart from "../../Assets/img/Digiheart.png"
+import Mpf from "../../Assets/img/MPFormReact.png"
+import TruckStar from "../../Assets/img/TruckStar.png"
 import useThemeContext from "../../Hooks/useThemeContext";
 
 const Portfolio = () => {

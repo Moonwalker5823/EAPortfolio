@@ -1,8 +1,8 @@
 import "./Hobbies.css"
-import Nba from "../../Assets/Img/NbaPic.png"
-import Audio from "../../Assets/Img/AudioPic.jpeg"
-import Nfl from "../../Assets/Img/FootballPic.png"
-import Xbox from "../../Assets/Img/XboxPic.png"
+import Nba from "../../Assets/img/NbaPic.png"
+import Audio from "../../Assets/img/AudioPic.jpeg"
+import Nfl from "../../Assets/img/FootballPic.png"
+import Xbox from "../../Assets/img/XboxPic.png"
 import Dogs from "../../Assets/img/cartoon_dogs.png"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"

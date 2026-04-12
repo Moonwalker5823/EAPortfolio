@@ -1,7 +1,7 @@
 import "./Testimonial.css"
 import { Swiper, SwiperSlide } from "swiper/react"
-import Konstantin from "../../Assets/Img/KonstantineHamilton.jpeg"
-import Brian from "../../Assets/Img/Brian.png"
+import Konstantin from "../../Assets/img/KonstantineHamilton.jpeg"
+import Brian from "../../Assets/img/Brian.png"
 import { Pagination } from "swiper/modules"
 import 'swiper/css/pagination'
 import 'swiper/css'
