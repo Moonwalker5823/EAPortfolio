@@ -52,7 +52,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
    
 }
 .testimonial>img {
@@ -92,7 +92,7 @@
         box-sizing: border-box;
     }
     .testimonial {
-        padding: 0 0.5rem;
+        padding: 1rem 0.5rem;
         width: 100%;
         box-sizing: border-box;
     }

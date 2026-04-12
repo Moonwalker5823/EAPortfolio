@@ -16,7 +16,7 @@ const Services = () => {
         {/*Left */}
         <div className="service">
             <span  id='scrollHeader' style={{color: darkMode && "white"}}>My Services</span>
-            <span>Innovative full stack engineer.</span>
+            <span>Design & Engineering Consulting</span>
             <span>
                 Who's passionate about building responsive, scalable web experiences using modern libraries, frameworks, and thoughtful design.
             </span>
@@ -37,8 +37,8 @@ const Services = () => {
              className="l-card">
                 <Card 
                     emoji= {Cool}
-                    text="Design"
-                    detail={"Translating ideas into clean, functional interfaces using Figma, Excalidraw, Sketch, and Photoshop. Experienced working directly from design specs handed off by product and design teams."}
+                    text="Design / Frontend"
+                    detail={"Translating ideas into clean, functional interfaces using Figma, Excalidraw, Sketch, and Photoshop. Experienced collaborating with product and design teams to bring concepts to life through thoughtful frontend implementation."}
                 />
             </motion.div>
             <motion.div 
@@ -48,8 +48,8 @@ const Services = () => {
             className="r-card">
                 <Card 
                     emoji= {Smile}
-                    text="Engineer"
-                    detail={"Building production-grade full stack applications with React, Vue.js, Laravel, Node.js, Express, Next.js, GraphQL, MySQL, and MongoDB. 4+ years of real-world experience shipping features end-to-end."}
+                    text="Full Stack Engineering"
+                    detail={"Delivering production-grade full stack solutions using React, Vue.js, Laravel, Node.js, Express, Next.js, GraphQL, MySQL, and MongoDB. 4+ years of experience shipping features end-to-end and advising on scalable architecture decisions."}
                 />
             </motion.div>
             <motion.div
@@ -60,7 +60,7 @@ const Services = () => {
                 <Card 
                     emoji= {Wink}
                     text="UI/UX"
-                    detail={"Crafting polished, accessible user experiences with Tailwind CSS, Bootstrap, Material UI, and Emotion. Focused on responsive layouts, intuitive interactions, and clean component design."}
+                    detail={"Crafting polished, accessible user experiences with Tailwind CSS, Bootstrap, Material UI, and Emotion. Focused on responsive design, usability, and building intuitive, maintainable component systems."}
                 />
             </motion.div>
         </div>

@@ -140,6 +140,7 @@
         width: auto;
         display: flex;
         justify-content: center;
+        text-decoration: none;
     }
     .i-right {
         transform: scale(.8);

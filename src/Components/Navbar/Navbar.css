@@ -144,4 +144,7 @@
     .n-name {
         font-size: 1rem;
     }
+    .n-right {
+        margin-right: 0;
+    }
 }
