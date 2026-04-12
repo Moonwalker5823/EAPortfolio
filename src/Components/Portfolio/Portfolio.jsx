@@ -17,9 +17,9 @@ const Portfolio = () => {
           <span id='title'>Hemmings</span>
           <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows | Bidding System</span>
         </a>
-        <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
+        <a href="https://erictruckstar.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
-          <span id='title'>TruckStar (April 2026)</span>
+          <span id='title'>TruckStar</span>
           <span id='subtitle'>Food Truck Finder</span>
         </a>
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
