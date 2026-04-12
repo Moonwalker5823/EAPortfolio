@@ -16,7 +16,7 @@ const Hobbies = () => {
       {/*left */}
      <div className="hobby">
         <span id="Header" style={{color: darkMode && "white"}}>My Hobbies</span>
-        <span id="hobby_text" style={{color: darkMode ? "white" : "var(--gray)"}}>
+        <span id="hobby_text" style={{color: darkMode ? "white" : "var(--black)"}}>
           When I'm not pushing code, you can find me...<br/><br/>
           🐾 Hanging with Onyx &amp; Cody — My pitbull Onyx and morkie Cody keep life entertaining. Best debugging companions in the business.<br/><br/>
           🏈 Diehard Sports Fan — Giants, Bulls, and Mets through the good times and the bad. Fantasy football is basically a second job at this point.<br/><br/>
