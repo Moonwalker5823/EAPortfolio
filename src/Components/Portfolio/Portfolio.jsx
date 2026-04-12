@@ -1,15 +1,15 @@
 import "./Portfolio.css"
-import Beamql from "../../Assets/img/beamql.jpeg"
-import Digiheart from "../../Assets/img/Digiheart.png"
-import Mpf from "../../Assets/img/MPFormReact.png"
-import TruckStar from "../../Assets/img/TruckStar.png"
+import Beamql from "../../Assets/Img/beamql.jpeg"
+import Digiheart from "../../Assets/Img/Digiheart.png"
+import Mpf from "../../Assets/Img/MPFormReact.png"
+import TruckStar from "../../Assets/Img/TruckStar.png"
 import useThemeContext from "../../Hooks/useThemeContext";
 
 const Portfolio = () => {
   const { darkMode } = useThemeContext();
   return (
     <div className="portfolio" id="Portfolio">
-      <span style={{color: darkMode && "white"}}>Portfolio</span>
+      <span id='scrollHeader' style={{color: darkMode && "white"}}>Portfolio</span>
       <div className="blur p-blur1" style={{background: "#409FF6"}}></div>
       <div className="portfolio-cards">
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
@@ -25,7 +25,7 @@ const Portfolio = () => {
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
           <span id='title'>TruckStar (April 2026)</span>
-          <span id='subtitle'>Food truck finder</span>
+          <span id='subtitle'>Food Truck Finder</span>
         </a>
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={Digiheart} alt="Digiheart" />

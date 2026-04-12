@@ -1,11 +1,13 @@
 import "./Hobbies.css"
-import Nba from "../../Assets/img/NbaPic.png"
-import Audio from "../../Assets/img/AudioPic.jpeg"
-import Nfl from "../../Assets/img/FootballPic.png"
-import Xbox from "../../Assets/img/XboxPic.png"
+import Nba from "../../Assets/Img/NbaPic.png"
+import Audio from "../../Assets/Img/AudioPic.jpeg"
+import Nfl from "../../Assets/Img/FootballPic.png"
+import Xbox from "../../Assets/Img/XboxPic.png"
 import Dogs from "../../Assets/img/cartoon_dogs.png"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
+import {Link} from "react-scroll"
+
 
 const Hobbies = () => {
   const { darkMode } = useThemeContext();
@@ -22,9 +24,8 @@ const Hobbies = () => {
           🎵 Music &amp; Audio Engineering — Before I was writing code I was behind the console recording sessions with major artists in NYC. Music never leaves you — it just changes how you build things.<br/><br/>
           💻 Coding (Obviously 😎) — Building side projects, exploring new frameworks, contributing to open source. If there's a problem worth solving, there's probably a weekend project about it.
         </span>
-        <div style={{width: 'fit-content'}}>
-          <button className="button s-button" style={{border: darkMode && "2px solid white"}} onClick={() => document.getElementById('Scroollheader')?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })}>Contact Me</button>
-        </div>
+        <Link spy={true} smooth={true} to="Contact">
+        <button className="button s-button" style={{border: darkMode && "2px solid white"}}>Contact Me</button></Link>
         <div className="blur h-blur1" style={{background: "#409FF6"}}></div>
         <div className="blur h-blur2" style={{background: "#EC5B6C"}}></div>
         </div>

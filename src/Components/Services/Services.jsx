@@ -1,7 +1,7 @@
 import "./Services.css"
-import Cool from "../../Assets/img/coolemoji.png"
-import Smile from "../../Assets/img/smileemoji.png"
-import Wink from "../../Assets/img/winkemoji.png"
+import Cool from "../../Assets/Img/coolemoji.png"
+import Smile from "../../Assets/Img/smileemoji.png"
+import Wink from "../../Assets/Img/winkemoji.png"
 import Card from "../Card/Card"
 import Resume from "../../Assets/Eric_Askew_Resume_2026.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
@@ -15,10 +15,10 @@ const Services = () => {
     <div className="services" id="Services">
         {/*Left */}
         <div className="service">
-            <span style={{color: darkMode && "white"}}>My Services</span>
+            <span  id='scrollHeader' style={{color: darkMode && "white"}}>My Services</span>
             <span>Innovative full stack engineer.</span>
             <span>
-                Who's passionate about building responsive, scalable web experiences using modern libraries, frameworks, and thoughtful design.  Using modern libraries and frameworks.
+                Who's passionate about building responsive, scalable web experiences using modern libraries, frameworks, and thoughtful design.
             </span>
             <a href={Resume} download>
             <button className="button s-button"

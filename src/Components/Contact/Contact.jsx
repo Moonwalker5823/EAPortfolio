@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div className={`contact-form ${darkMode ? 'dark' : ''}`} id="Contact">
         <div className="w-left" id="Scroollheader">
-            <span className="c-heading" style={{color: darkMode ? "white" : "var(--black)"}}>Get in contact with me</span>
+            <span className="c-heading" style={{color: darkMode ? "white" : "var(--black)"}}>Get in contact with us</span>
         </div>
         <div className="c-dogs">
             <div className="c-right">
