@@ -15,7 +15,7 @@ const Portfolio = () => {
         <a href="https://hemmings.com" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={Hemmings} alt="Hemmings" style={{aspectRatio: '1', objectFit: 'cover'}} />
           <span id='title'>Hemmings</span>
-          <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows</span>
+          <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows | Bidding System</span>
         </a>
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />

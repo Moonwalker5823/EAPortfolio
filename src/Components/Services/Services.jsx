@@ -3,7 +3,7 @@ import Cool from "../../Assets/img/coolemoji.png"
 import Smile from "../../Assets/img/smileemoji.png"
 import Wink from "../../Assets/img/winkemoji.png"
 import Card from "../Card/Card"
-import Resume from "../../Assets/Eric_Askew_Resume_2026.pdf"
+import Resume from "../../Assets/Eric_Askew_Resume.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 

@@ -11,7 +11,7 @@ import Me from "../../Assets/img/Me1.png"
 import Music from "../../Assets/img/music.jpeg"
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
 import Car from "../../Assets/img/car.png"
-import CV from "../../Assets/Eric_Askew_Cover_Letter.pdf"
+import CV from "../../Assets/Eric_Askew_Cover_Letter_2026.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 
