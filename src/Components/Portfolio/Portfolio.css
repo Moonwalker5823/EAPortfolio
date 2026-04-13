@@ -3,9 +3,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: auto;
     margin: 1rem auto;
     margin-top: 10rem;
+    padding-bottom: 6rem;
+    scroll-margin-top: 80px;
 }
 .portfolio span:nth-child(1) {
     color: var(--black);
@@ -13,17 +15,19 @@
     font-weight: bold;
 }
 .portfolio-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
     margin-top: 3rem;
+    width: min(46rem, 90vw);
 }
 .portfolioCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 22rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -76,13 +80,14 @@
         padding-bottom: 2rem;
     }
     .portfolio-cards {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        width: 90%;
         gap: 2rem;
     }
     .portfolioCard {
-        width: 90%;
+        width: 100%;
         max-width: 22rem;
+        margin: 0 auto;
     }
     .p-blur1, .p-blur2 {
         display: none;
@@ -92,8 +97,5 @@
 @media screen and (max-width: 480px) {
     .portfolio {
         margin-top: 2rem;
-    }
-    .portfolioCard {
-        width: 95%;
     }
 }

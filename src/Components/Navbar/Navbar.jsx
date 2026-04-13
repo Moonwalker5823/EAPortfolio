@@ -6,10 +6,10 @@ import useThemeContext from "../../Hooks/useThemeContext";
 const scrollTo = (id) => {
   if (id === 'intro') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else if (id === 'Scroollheader') {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-  } else {
+  } else if (id === 'Experience') {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+  } else {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 };
 
