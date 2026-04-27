@@ -3,14 +3,13 @@ import Cool from "../../Assets/img/coolemoji.png"
 import Smile from "../../Assets/img/smileemoji.png"
 import Wink from "../../Assets/img/winkemoji.png"
 import Card from "../Card/Card"
-import Resume from "../../Assets/Eric_Askew_Resume-2026.pdf"
+import Resume from "../../Assets/E_Askew_Resume-2026.pdf"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { motion } from "framer-motion"
 
 const Services = () => {
     const { darkMode } = useThemeContext();
     const transition = {duration: 2, type: "spring", bounce: .5}
-
   return (
     <div className="services" id="Services">
         {/*Left */}
