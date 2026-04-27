@@ -17,15 +17,15 @@ const Portfolio = () => {
           <span id='title'>Hemmings</span>
           <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows | Bidding System</span>
         </a>
+        <a href="https://digiheart.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={Digiheart} alt="Digiheart" />
+          <span id='title'>Digiheart (May 2026)</span>
+          <span id='subtitle'>Digital Keepsake for Precious Memories</span>
+        </a>
         <a href="https://erictruckstarfoodfinder.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
           <span id='title'>TruckStar</span>
           <span id='subtitle'>Food Truck Finder</span>
-        </a>
-        <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
-          <img src={Digiheart} alt="Digiheart" />
-          <span id='title'>Digiheart (May 2026)</span>
-          <span id='subtitle'>Digital Keepsake for Precious Memories</span>
         </a>
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={Beamql} alt="beamql" />
