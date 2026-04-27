@@ -19,7 +19,7 @@ const Portfolio = () => {
         </a>
         <a href="https://digiheart.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={Digiheart} alt="Digiheart" />
-          <span id='title'>Digiheart (May 2026)</span>
+          <span id='title'>Digiheart</span>
           <span id='subtitle'>Digital Keepsake for Precious Memories</span>
         </a>
         <a href="https://erictruckstarfoodfinder.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
