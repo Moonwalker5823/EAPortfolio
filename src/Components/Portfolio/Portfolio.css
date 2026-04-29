@@ -95,3 +95,10 @@
         margin-top: 2rem;
     }
 }
+
+@media screen and (max-width: 767px) {
+  .portfolioCard {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+}
