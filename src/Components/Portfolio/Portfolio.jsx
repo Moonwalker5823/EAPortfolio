@@ -3,6 +3,7 @@ import Beamql from "../../Assets/img/beamql.jpeg"
 import Digiheart from "../../Assets/img/Digiheart.png"
 import Hemmings from "../../Assets/img/hemmingsLogo.png"
 import TruckStar from "../../Assets/img/TruckStar.png"
+import VibeList from "../../Assets/img/vibelist.jpg"
 import useThemeContext from "../../Hooks/useThemeContext";
 
 const Portfolio = () => {
@@ -26,6 +27,11 @@ const Portfolio = () => {
           <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
           <span id='title'>TruckStar</span>
           <span id='subtitle'>Food Truck Finder</span>
+        </a>
+        <a href="https://vibelist-psi.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={VibeList} alt="VibeList" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <span id='title'>VibeList</span>
+          <span id='subtitle'>Mood curated playlist</span>
         </a>
         <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={Beamql} alt="beamql" />
