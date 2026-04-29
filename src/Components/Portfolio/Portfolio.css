@@ -15,11 +15,9 @@
     font-weight: bold;
 }
 .portfolio-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    margin-top: 3rem;
-    width: min(46rem, 90vw);
+  margin-top: 3rem;
+  width: min(46rem, 90vw);
+  padding-bottom: 2.5rem;
 }
 .portfolioCard {
     display: flex;
@@ -70,6 +68,14 @@
     z-index: -1;
 }
 
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #409FF6;
+}
+
 @media screen and (max-width: 900px) {
     .portfolio {
         height: auto;
@@ -78,16 +84,6 @@
         margin-top: 0;
         padding-top: 2rem;
         padding-bottom: 2rem;
-    }
-    .portfolio-cards {
-        grid-template-columns: 1fr;
-        width: 90%;
-        gap: 2rem;
-    }
-    .portfolioCard {
-        width: 100%;
-        max-width: 22rem;
-        margin: 0 auto;
     }
     .p-blur1, .p-blur2 {
         display: none;
