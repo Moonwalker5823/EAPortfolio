@@ -25,6 +25,7 @@
     align-items: center;
     width: 100%;
     padding: 1rem;
+    padding-bottom: 1.5rem;
     box-sizing: border-box;
     text-decoration: none;
     cursor: pointer;
@@ -68,12 +69,10 @@
     z-index: -1;
 }
 
-.swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  background: #409FF6;
+.portfolio-cards {
+  --swiper-pagination-color: #409FF6;
+  --swiper-pagination-bullet-inactive-color: #ccc;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
 @media screen and (max-width: 900px) {
