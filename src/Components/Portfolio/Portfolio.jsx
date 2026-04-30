@@ -28,39 +28,39 @@ const Portfolio = () => {
         }}
       >
         <SwiperSlide>
-          <a href="https://hemmings.com" target="_blank" rel="noreferrer" className="portfolioCard">
-            <img src={Hemmings} alt="Hemmings" style={{aspectRatio: '1', objectFit: 'cover'}} />
-            <span id='title'>Hemmings</span>
-            <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows | Bidding System</span>
-          </a>
+        <a href="https://hemmings.com" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={Hemmings} alt="Hemmings" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <span id='title'>Hemmings</span>
+          <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows | Bidding System</span>
+        </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://digiheart.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
-            <img src={Digiheart} alt="Digiheart" />
-            <span id='title'>Digiheart</span>
-            <span id='subtitle'>Digital Keepsake for Precious Memories</span>
-          </a>
+        <a href="https://digiheart.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={Digiheart} alt="Digiheart" />
+          <span id='title'>Digiheart</span>
+          <span id='subtitle'>Digital Keepsake for Precious Memories</span>
+        </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://erictruckstarfoodfinder.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
-            <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
-            <span id='title'>TruckStar</span>
-            <span id='subtitle'>Food Truck Finder</span>
-          </a>
+        <a href="https://erictruckstarfoodfinder.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <span id='title'>TruckStar</span>
+          <span id='subtitle'>Food Truck Finder</span>
+        </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://vibelist-psi.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
-            <img src={VibeList} alt="VibeList" style={{aspectRatio: '1', objectFit: 'cover'}} />
-            <span id='title'>VibeList</span>
-            <span id='subtitle'>Mood curated playlist</span>
-          </a>
+        <a href="https://vibelist-psi.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={VibeList} alt="VibeList" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <span id='title'>VibeList</span>
+            <span id='subtitle'>Claude AI · Last.fm · Mood Detection</span>
+        </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://github.com/Moonwalker5823" target="_blank" rel="noreferrer" className="portfolioCard">
-            <img src={Beamql} alt="beamql" />
-            <span id='title'>BeamQl</span>
-            <span id='subtitle'>Streamline migration to GraphQL</span>
-          </a>
+        <a href="https://github.com/Moonwalker5823/beam-corp" target="_blank" rel="noreferrer" className="portfolioCard">
+          <img src={Beamql} alt="beamql" />
+          <span id='title'>BeamQl</span>
+          <span id='subtitle'>Streamline migration to GraphQL</span>
+        </a>
         </SwiperSlide>
       </Swiper>
       <div className="blur p-blur2" style={{background: "#EC5B6C"}}></div>
