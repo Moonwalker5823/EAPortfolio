@@ -38,14 +38,14 @@ const Portfolio = () => {
         <a href="https://digiheart.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={Digiheart} alt="Digiheart" />
           <span id='title'>Digiheart</span>
-          <span id='subtitle'>Digital Keepsake for Precious Memories</span>
+          <span id='subtitle'>Full-stack memorial app with protected profiles and media galleries</span>
         </a>
         </SwiperSlide>
         <SwiperSlide>
         <a href="https://erictruckstarfoodfinder.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
           <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
           <span id='title'>TruckStar</span>
-          <span id='subtitle'>Food Truck Finder</span>
+          <span id='subtitle'>Real-time food trucks near you, powered by Google Maps</span>
         </a>
         </SwiperSlide>
         <SwiperSlide>
