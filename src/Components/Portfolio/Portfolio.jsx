@@ -55,13 +55,6 @@ const Portfolio = () => {
             <span id='subtitle'>Claude AI · Last.fm · Mood Detection</span>
         </a>
         </SwiperSlide>
-        <SwiperSlide>
-        <a href="https://github.com/Moonwalker5823/beam-corp" target="_blank" rel="noreferrer" className="portfolioCard">
-          <img src={Beamql} alt="beamql" />
-          <span id='title'>BeamQl</span>
-          <span id='subtitle'>Streamline migration to GraphQL</span>
-        </a>
-        </SwiperSlide>
       </Swiper>
       <div className="blur p-blur2" style={{background: "#EC5B6C"}}></div>
     </div>
