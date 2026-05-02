@@ -2,7 +2,6 @@ import "./Portfolio.css"
 import Beamql from "../../Assets/img/beamql.jpeg"
 import Digiheart from "../../Assets/img/Digiheart.png"
 import Hemmings from "../../Assets/img/hemmingsLogo.png"
-import TruckStar from "../../Assets/img/TruckStar.png"
 import VibeList from "../../Assets/img/vibelist.jpg"
 import useThemeContext from "../../Hooks/useThemeContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -29,28 +28,36 @@ const Portfolio = () => {
       >
         <SwiperSlide>
         <a href="https://hemmings.com" target="_blank" rel="noreferrer" className="portfolioCard">
-          <img src={Hemmings} alt="Hemmings" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <div style={{width:'100%', aspectRatio:'1', borderRadius:'19px', border:'2px solid var(--blue)', boxShadow:'0px 8px 24px rgba(0,0,0,0.35)', overflow:'hidden', background:'#2f5f56', position:'relative'}}>
+            <img src={Hemmings} alt="Hemmings" style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', objectFit:'cover', display:'block', border:'none', boxShadow:'none', borderRadius:'0', transform:'scale(1.35)', transformOrigin:'center'}} />
+          </div>
           <span id='title'>Hemmings</span>
           <span id='subtitle'>Contact Page | Membership (One Page Checkout) | Checkout Flows | Bidding System</span>
         </a>
         </SwiperSlide>
         <SwiperSlide>
         <a href="https://digiheart.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
-          <img src={Digiheart} alt="Digiheart" />
+          <div style={{width:'100%', aspectRatio:'1', borderRadius:'19px', border:'2px solid var(--blue)', boxShadow:'0px 8px 24px rgba(0,0,0,0.35)', overflow:'hidden', background:'rgb(228 215 215)', position:'relative'}}>
+            <img src={Digiheart} alt="Digiheart" style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', objectFit:'cover', display:'block', border:'none', boxShadow:'none', borderRadius:'0', mixBlendMode:'multiply'}} />
+          </div>
           <span id='title'>Digiheart</span>
           <span id='subtitle'>Full-stack memorial app with protected profiles and media galleries</span>
         </a>
         </SwiperSlide>
         <SwiperSlide>
         <a href="https://erictruckstarfoodfinder.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
-          <img src={TruckStar} alt="TruckStar" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <div style={{width:'100%', aspectRatio:'1', borderRadius:'19px', border:'2px solid var(--blue)', boxShadow:'0px 8px 24px rgba(0,0,0,0.35)', display:'flex', alignItems:'center', justifyContent:'center', background:'#111827'}}>
+            <h1 style={{background:'linear-gradient(to bottom right, #fb923c, #fde047)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', fontFamily:'Gumela, cursive', fontSize:'2.5rem', fontWeight:'bold', margin:0}}>Truck Star</h1>
+          </div>
           <span id='title'>TruckStar</span>
           <span id='subtitle'>Real-time food trucks near you, powered by Google Maps</span>
         </a>
         </SwiperSlide>
         <SwiperSlide>
         <a href="https://vibelist-psi.vercel.app/" target="_blank" rel="noreferrer" className="portfolioCard">
-          <img src={VibeList} alt="VibeList" style={{aspectRatio: '1', objectFit: 'cover'}} />
+          <div style={{width:'100%', aspectRatio:'1', borderRadius:'19px', border:'2px solid var(--blue)', boxShadow:'0px 8px 24px rgba(0,0,0,0.35)', overflow:'hidden', background:'#252464', position:'relative'}}>
+            <img src={VibeList} alt="VibeList" style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', objectFit:'cover', display:'block', border:'none', boxShadow:'none', borderRadius:'0'}} />
+          </div>
           <span id='title'>VibeList</span>
             <span id='subtitle'>Claude AI · Last.fm · Mood Detection</span>
         </a>

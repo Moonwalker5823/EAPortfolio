@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Gumela';
+  src: url('../../Fonts/Gumela Regular.otf') format('opentype');
+}
+
 .portfolio {
     display: flex;
     align-items: center;
