@@ -1,0 +1,165 @@
+<h2>Slider Navigation Style</h2>
+<p class="subtitle">Which navigation style feels right for the portfolio slider?</p>
+
+<style>
+  .mock-slider {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+  }
+  .mock-tile {
+    background: white;
+    border: 2px solid #409FF6;
+    border-radius: 12px;
+    width: 120px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #555;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+  }
+  .mock-tile img-placeholder {
+    display: block;
+    width: 60px;
+    height: 40px;
+    background: #e0eeff;
+    border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  .arrow-btn {
+    background: white;
+    border: 2px solid #409FF6;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #409FF6;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  .dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+  }
+  .dot.active {
+    background: #409FF6;
+    width: 20px;
+    border-radius: 4px;
+  }
+  .mock-label {
+    font-size: 11px;
+    color: #888;
+    text-align: center;
+    margin-top: 4px;
+  }
+</style>
+
+<div class="cards">
+
+  <div class="card" data-choice="arrows" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div class="mock-slider">
+        <div class="arrow-btn">‹</div>
+        <div style="display:flex;gap:10px;">
+          <div class="mock-tile">
+            <img-placeholder></img-placeholder>
+            Hemmings
+          </div>
+          <div class="mock-tile">
+            <img-placeholder></img-placeholder>
+            Digiheart
+          </div>
+        </div>
+        <div class="arrow-btn">›</div>
+      </div>
+      <div class="mock-label">No dots — arrows only</div>
+    </div>
+    <div class="card-body">
+      <h3>A — Arrows Only</h3>
+      <p>Prev/next buttons on the sides. Clean, minimal. Works well when tiles fill the space.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="dots" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div class="mock-slider" style="flex-direction:column;">
+        <div style="display:flex;gap:10px;">
+          <div class="mock-tile">
+            <img-placeholder></img-placeholder>
+            Hemmings
+          </div>
+          <div class="mock-tile">
+            <img-placeholder></img-placeholder>
+            Digiheart
+          </div>
+        </div>
+        <div class="dots" style="margin-top:12px;">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      <div class="mock-label">Dots show slide position</div>
+    </div>
+    <div class="card-body">
+      <h3>B — Dots Only</h3>
+      <p>Pagination dots below. Tap/swipe or click dots to navigate. No side buttons.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="both" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div class="mock-slider" style="flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="arrow-btn">‹</div>
+          <div style="display:flex;gap:10px;">
+            <div class="mock-tile">
+              <img-placeholder></img-placeholder>
+              Hemmings
+            </div>
+            <div class="mock-tile">
+              <img-placeholder></img-placeholder>
+              Digiheart
+            </div>
+          </div>
+          <div class="arrow-btn">›</div>
+        </div>
+        <div class="dots" style="margin-top:10px;">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      <div class="mock-label">Arrows + dots</div>
+    </div>
+    <div class="card-body">
+      <h3>C — Arrows + Dots</h3>
+      <p>Both controls. Most navigable — users always know where they are and how to move.</p>
+    </div>
+  </div>
+
+</div>

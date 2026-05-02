@@ -1,0 +1,44 @@
+<h2>Desktop Section Layout — Which approach?</h2>
+<p class="subtitle">The goal: click a nav link → only that section is visible. Three ways to get there.</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>100vh + CSS Scroll Snap</h3>
+      <p>Each section is exactly <code>height: 100vh</code>. The page uses <code>scroll-snap-type: y mandatory</code> so scrolling always lands on a clean section boundary — no half-sections visible. Nav clicks scroll exactly to the section.</p>
+      <div class="pros-cons" style="margin-top:0.75rem">
+        <div class="pros"><h4>Pros</h4><ul><li>Silky, intentional scroll feel</li><li>Nav links always show exactly one section</li><li>Very predictable layout</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Scroll feels "locked" — some users dislike it</li><li>Sections with lots of content (Contact, Portfolio) may need internal scroll</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>100vh per section, free scroll</h3>
+      <p>Each section gets <code>min-height: 100vh</code> with content centered. Normal free scrolling — no snapping. Nav clicks jump to the section anchor. Each section fills exactly one screen on desktop.</p>
+      <div class="pros-cons" style="margin-top:0.75rem">
+        <div class="pros"><h4>Pros</h4><ul><li>Natural scrolling feel</li><li>Nav clicks land at the right place</li><li>Content-heavy sections can grow if needed</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Fast scrollers may see two sections at once between anchors</li><li>Requires careful vertical centering per section</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Fixed gap between sections (no 100vh)</h3>
+      <p>Keep sections content-sized but enforce a consistent <code>margin-top</code> gap (e.g. <code>6rem</code>) between every section. Doesn't guarantee "one section per screen" but keeps spacing uniform and predictable.</p>
+      <div class="pros-cons" style="margin-top:0.75rem">
+        <div class="pros"><h4>Pros</h4><ul><li>Simplest change — just normalize margins</li><li>Works naturally on all screen sizes</li><li>No risk of awkward empty space</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Nav links may land mid-section on some screen heights</li><li>Doesn't fulfill "one section per screen" goal</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:1.5rem">My recommendation: <strong>Option B</strong> — 100vh per section, free scroll. Gives you the full-screen section behavior without locking the scroll wheel. Works great with the existing <code>scroll-margin-top</code> already set on some sections.</p>
