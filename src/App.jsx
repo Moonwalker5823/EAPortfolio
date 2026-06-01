@@ -588,31 +588,6 @@ function Skills() {
           </motion.p>
         </div>
 
-        <div className="space-y-3 mb-16">
-          <div className="marquee-wrap">
-            <div className="marquee-track-l flex gap-3">
-              {[...row1, ...row1].map((s, i) => (
-                <span key={i}
-                  className="flex-shrink-0 font-barlow font-bold tracking-widest text-sm uppercase px-5 py-2 transition-all cursor-default whitespace-nowrap hover:text-gold"
-                  style={{ background: 'var(--badge)', border: '1px solid var(--b10)', color: 'var(--txt-60)' }}>
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="marquee-wrap">
-            <div className="marquee-track-r flex gap-3">
-              {[...row2, ...row2].map((s, i) => (
-                <span key={i}
-                  className="flex-shrink-0 font-barlow font-bold tracking-widest text-sm uppercase px-5 py-2 transition-all cursor-default whitespace-nowrap hover:text-gold"
-                  style={{ background: 'var(--badge)', border: '1px solid var(--b10)', color: 'var(--txt-60)' }}>
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <motion.div
           className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 md:gap-4"
           initial="hidden"
