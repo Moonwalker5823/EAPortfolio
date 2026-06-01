@@ -614,7 +614,7 @@ function Skills() {
         </div>
 
         <motion.div
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4"
+          className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 md:gap-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
@@ -628,10 +628,10 @@ function Skills() {
                 visible: { opacity: 1, scale: 1, rotate: 0, transition: { type: 'spring', stiffness: 260, damping: 20 } }
               }}
               whileHover={{ y: -6, scale: 1.08, rotate: 2, transition: { type: 'spring', stiffness: 400, damping: 15 } }}
-              className="skill-card flex flex-col items-center gap-2.5 p-3 transition-colors duration-200 cursor-default"
+              className="skill-card flex flex-col items-center gap-1.5 p-2 md:gap-2.5 md:p-3 transition-colors duration-200 cursor-default"
               style={{ background: 'var(--card)', border: '1px solid var(--b5)' }}
             >
-              <div className="w-10 h-10 flex-shrink-0 rounded-md overflow-hidden flex items-center justify-center p-1"
+              <div className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 rounded-md overflow-hidden flex items-center justify-center p-1"
                 style={{ background: 'var(--card-icon)' }}>
                 {icons[skill]}
               </div>

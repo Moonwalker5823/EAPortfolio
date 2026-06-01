@@ -125,12 +125,10 @@
     color: #F5C518;
   }
   .section-title {
-    @apply text-6xl tracking-wide;
+    @apply tracking-wide;
     font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 9vw, 5rem);
     color: var(--txt);
-  }
-  @media (min-width: 768px) {
-    .section-title { font-size: 5rem; }
   }
   .crown { color: #F5C518; }
   .input-field {
