@@ -11,7 +11,8 @@ import BrianImg from './Assets/img/Brian.png';
 import OnyxImg from './Assets/img/Onyx.jpg';
 import CodyImg from './Assets/img/Cody.jpg';
 import WaveImg from './Assets/img/musicWave.jpeg';
-import CV from './Assets/EAskew_Cover_Letter_2026_v2.pdf';
+import Resume from './Assets/E_Askew_Resume_2026_v2.pdf';
+import CoverLetter from './Assets/EAskew_Cover_Letter_2026_v2.pdf';
 
 const ThemeCtx = createContext(true);
 
@@ -325,8 +326,11 @@ function Hero() {
             <button onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })} className="btn-gold">
               SEE THE WORK
             </button>
-            <a href={CV} download className="btn-outline">
-              DOWNLOAD CV
+            <a href={Resume} download className="btn-outline">
+              DOWNLOAD RESUME
+            </a>
+            <a href={CoverLetter} download className="font-barlow font-bold tracking-widest text-xs uppercase transition-colors duration-200 hover:text-gold" style={{ color: 'var(--txt-40)' }}>
+              + COVER LETTER
             </a>
           </motion.div>
 
@@ -420,6 +424,135 @@ function Stats() {
         >
           From NYC recording studios to production codebases — every environment demands the same thing: get it right.
         </motion.p>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Hobbies ─────────────────────────────────────────────── */
+const hobbies = [
+  {
+    emoji: '🐾',
+    title: 'DOGS',
+    desc: 'Onyx & Cody — pitbull + morkie. Best debugging companions in the business.',
+    tag: 'LIFESTYLE',
+    rotate: -2.5,
+    accent: '#C9A000',
+  },
+  {
+    emoji: '🏈',
+    title: 'SPORTS',
+    desc: 'Giants · Bulls · Mets. Fantasy football is basically a second job.',
+    tag: 'FAN LIFE',
+    rotate: 1.8,
+    accent: '#4a7c59',
+  },
+  {
+    emoji: '🎵',
+    title: 'MUSIC',
+    desc: 'Former audio engineer. Recorded sessions with major artists in NYC studios.',
+    tag: 'PAST LIFE',
+    rotate: -1.2,
+    accent: '#7c4a7c',
+  },
+  {
+    emoji: '🎮',
+    title: 'GAMING',
+    desc: 'Xbox. Competing online or unwinding after a long sprint — both count.',
+    tag: 'RESET MODE',
+    rotate: 2.2,
+    accent: '#1a6b1a',
+  },
+  {
+    emoji: '💻',
+    title: 'SIDE PROJECTS',
+    desc: 'If there\'s a problem worth solving, there\'s a weekend project about it.',
+    tag: 'OBVIOUSLY',
+    rotate: -1.8,
+    accent: '#C9A000',
+  },
+];
+
+function Hobbies() {
+  return (
+    <section className="py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="mb-12 overflow-hidden">
+          <motion.h2
+            className="section-title"
+            initial={{ clipPath: 'inset(0 100% 0 0)' }}
+            whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <span className="crown">♛ </span>WHEN I'M NOT CODING
+          </motion.h2>
+          <motion.p
+            className="font-barlow tracking-widest text-sm uppercase mt-2"
+            style={{ color: 'var(--txt-40)' }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            The full picture
+          </motion.p>
+        </div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          {hobbies.map((h) => (
+            <motion.div
+              key={h.title}
+              variants={{
+                hidden: { opacity: 0, y: 30, rotate: h.rotate * 2 },
+                visible: { opacity: 1, y: 0, rotate: h.rotate, transition: { type: 'spring', stiffness: 160, damping: 18 } }
+              }}
+              whileHover={{
+                rotate: 0,
+                y: -8,
+                scale: 1.04,
+                boxShadow: `0 0 28px ${h.accent}55`,
+                borderColor: h.accent,
+                transition: { type: 'spring', stiffness: 300, damping: 18 }
+              }}
+              className="relative flex flex-col gap-4 p-5 cursor-default select-none"
+              style={{
+                background: 'var(--card)',
+                border: '1px solid var(--b8)',
+                transformOrigin: 'center center',
+              }}
+            >
+              {/* Tag stamp */}
+              <div className="font-barlow font-bold tracking-[0.2em] text-[10px] uppercase"
+                style={{ color: h.accent, opacity: 0.8 }}>
+                {h.tag}
+              </div>
+
+              {/* Emoji */}
+              <div className="text-4xl leading-none">{h.emoji}</div>
+
+              {/* Title */}
+              <div className="font-bebas text-2xl tracking-wide leading-none" style={{ color: 'var(--txt)' }}>
+                {h.title}
+              </div>
+
+              {/* Description */}
+              <p className="font-dm text-xs leading-relaxed" style={{ color: 'var(--txt-50)' }}>
+                {h.desc}
+              </p>
+
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-300"
+                style={{ background: h.accent }} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
@@ -791,6 +924,7 @@ export default function App() {
         <Navbar isDark={isDark} onToggleTheme={() => setIsDark(v => !v)} />
         <Hero />
         <Stats />
+        <Hobbies />
         <Skills />
         <Projects />
         <Testimonials />
