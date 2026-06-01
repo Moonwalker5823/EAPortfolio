@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gumela';
+  src: url('./Fonts/Gumela Regular.otf') format('opentype');
+}
+
+/* ─── Theme variables (dark default) ─────────────────────── */
+:root {
+  --bg:            #080808;
+  --bg-alt:        #0a0a0a;
+  --card:          #161616;
+  --card-icon:     #0d0d0d;
+  --badge:         #161616;
+  --txt:           #FAFAFA;
+  --txt-60:        rgba(255,255,255,0.6);
+  --txt-50:        rgba(255,255,255,0.5);
+  --txt-40:        rgba(255,255,255,0.4);
+  --txt-35:        rgba(255,255,255,0.35);
+  --txt-30:        rgba(255,255,255,0.3);
+  --txt-25:        rgba(255,255,255,0.25);
+  --b5:            rgba(255,255,255,0.05);
+  --b8:            rgba(255,255,255,0.08);
+  --b10:           rgba(255,255,255,0.10);
+  --b25:           rgba(255,255,255,0.25);
+  --nav-bg:        rgba(8,8,8,0.9);
+  --overlay-bg:    #080808;
+  --stats-bg:      linear-gradient(180deg,#080808 0%,#0d0d0d 50%,#080808 100%);
+  --stats-border:  rgba(245,197,24,0.15);
+  --dot:           rgba(255,255,255,0.06);
+  --input-bg:      rgba(255,255,255,0.04);
+  --input-border:  rgba(255,255,255,0.08);
+  --glass-bg:      rgba(255,255,255,0.025);
+  --glass-border:  rgba(255,255,255,0.07);
+  --scrollbar-trk: #111;
+  --orb1:          rgba(245,197,24,0.15);
+  --orb2:          rgba(245,197,24,0.08);
+  --outline-border: rgba(255,255,255,0.25);
+  --outline-txt:   #ffffff;
+}
+
+:root.light-mode {
+  --bg:            #F5F4EF;
+  --bg-alt:        #EDECEA;
+  --card:          #FFFFFF;
+  --card-icon:     #F2F1EC;
+  --badge:         #F0EEE9;
+  --txt:           #111111;
+  --txt-60:        rgba(0,0,0,0.65);
+  --txt-50:        rgba(0,0,0,0.55);
+  --txt-40:        rgba(0,0,0,0.48);
+  --txt-35:        rgba(0,0,0,0.42);
+  --txt-30:        rgba(0,0,0,0.38);
+  --txt-25:        rgba(0,0,0,0.32);
+  --b5:            rgba(0,0,0,0.05);
+  --b8:            rgba(0,0,0,0.09);
+  --b10:           rgba(0,0,0,0.11);
+  --b25:           rgba(0,0,0,0.20);
+  --nav-bg:        rgba(245,244,239,0.92);
+  --overlay-bg:    #F5F4EF;
+  --stats-bg:      linear-gradient(180deg,#F5F4EF 0%,#E5E4DF 50%,#F5F4EF 100%);
+  --stats-border:  rgba(245,197,24,0.22);
+  --dot:           rgba(0,0,0,0.065);
+  --input-bg:      rgba(0,0,0,0.04);
+  --input-border:  rgba(0,0,0,0.10);
+  --glass-bg:      rgba(0,0,0,0.025);
+  --glass-border:  rgba(0,0,0,0.09);
+  --scrollbar-trk: #ccc;
+  --orb1:          rgba(245,197,24,0.12);
+  --orb2:          rgba(245,197,24,0.07);
+  --outline-border: rgba(0,0,0,0.22);
+  --outline-txt:   #111111;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  html, body {
+    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--txt);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-trk); }
+  ::-webkit-scrollbar-thumb { background: #F5C518; border-radius: 0; }
+  ::-webkit-scrollbar-thumb:hover { background: #FFE066; }
+
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-block font-bold tracking-widest uppercase px-7 py-3 cursor-pointer transition-all duration-200;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #080808;
+    background: #F5C518;
+    box-shadow: 0 0 28px rgba(245,197,24,0.4);
+  }
+  .btn-gold:hover {
+    background: #FFE066;
+    box-shadow: 0 0 42px rgba(245,197,24,0.65);
+    transform: translateY(-2px);
+  }
+  .btn-outline {
+    @apply inline-block border font-bold tracking-widest uppercase px-7 py-3 cursor-pointer transition-all duration-200;
+    font-family: 'Barlow Condensed', sans-serif;
+    border-color: var(--outline-border);
+    color: var(--outline-txt);
+  }
+  .btn-outline:hover {
+    border-color: #F5C518;
+    color: #F5C518;
+  }
+  .section-title {
+    @apply text-6xl tracking-wide;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--txt);
+  }
+  @media (min-width: 768px) {
+    .section-title { font-size: 5rem; }
+  }
+  .crown { color: #F5C518; }
+  .input-field {
+    @apply w-full px-4 py-3 text-sm outline-none transition-all duration-200;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--txt);
+  }
+  .input-field::placeholder { color: var(--txt-30); }
+  .input-field:focus {
+    border-color: #F5C518;
+    box-shadow: 0 0 0 2px rgba(245,197,24,0.15);
+  }
+}
+
+/* Grid dot background */
+.grid-bg {
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Gold glow for photo */
+.photo-glow {
+  box-shadow: 0 0 40px rgba(245,197,24,0.3), 0 0 80px rgba(245,197,24,0.1);
+}
+
+/* Marquee */
+.marquee-wrap { overflow: hidden; }
+.marquee-track-l { display: flex; width: max-content; animation: marquee-l 24s linear infinite; }
+.marquee-track-r { display: flex; width: max-content; animation: marquee-r 30s linear infinite; }
+.marquee-wrap:hover .marquee-track-l,
+.marquee-wrap:hover .marquee-track-r { animation-play-state: paused; }
+
+/* Skill card */
+.skill-card:hover {
+  border-color: #F5C518;
+  box-shadow: 0 0 18px rgba(245,197,24,0.2);
+}
+
+/* Project card */
+.project-card .overlay { opacity: 0; transition: opacity 0.3s ease; }
+.project-card:hover .overlay { opacity: 1; }
+.project-card:hover {
+  box-shadow: 0 0 30px rgba(245,197,24,0.2);
+  border-color: rgba(245,197,24,0.35);
+}
