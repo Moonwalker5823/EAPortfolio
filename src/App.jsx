@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, createContext, useContext } from 'react';
 import { motion, useInView, animate } from 'framer-motion';
 import Github from '@iconscout/react-unicons/icons/uil-github';
 import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin';
-import Me from './Assets/img/Me1.png';
+import Me from './Assets/img/profileEric.png';
 import HemmingsLogo from './Assets/img/hemmingsLogo.png';
 import Digiheart from './Assets/img/Digiheart.png';
 import VibeList from './Assets/img/vibelist.jpg';
