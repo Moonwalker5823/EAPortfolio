@@ -6,6 +6,7 @@ import Me from './Assets/img/profileEric.png';
 import HemmingsLogo from './Assets/img/hemmingsLogo.png';
 import Digiheart from './Assets/img/Digiheart.png';
 import VibeList from './Assets/img/vibelist.jpg';
+import VeganishLogo from './Assets/img/veganish-logo.svg';
 import KonstantinImg from './Assets/img/KonstantineHamilton.jpeg';
 import BrianImg from './Assets/img/Brian.png';
 import OnyxImg from './Assets/img/Onyx.jpg';
@@ -125,6 +126,17 @@ const skillBadges = [...skills, ...skills];
 
 /* ─── Projects ────────────────────────────────────────────── */
 const projects = [
+  {
+    name: 'VEGANISH CAFE',
+    desc: 'Client build \u00b7 Live online ordering \u00b7 Structured data for local search',
+    url: 'https://veganish-one.vercel.app/',
+    // object-contain, not cover: this is the badge rather than a screenshot. Its
+    // interior is transparent, so the cream tile shows through and it reads the
+    // way the real sticker does - the cafe's own nav sits it on a cream disc for
+    // exactly that reason.
+    thumb: <img src={VeganishLogo} alt="Veganish Cafe" className="w-full h-full object-contain p-6" />,
+    bg: '#F5F0E8',
+  },
   {
     name: 'HEMMINGS',
     desc: 'Contact Page · Membership · Checkout Flows · Bidding System',
