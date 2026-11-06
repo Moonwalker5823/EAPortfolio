@@ -1,0 +1,960 @@
+/* Session sheet: a console, a strip of tape, and plain notes. */
+
+:root {
+  --console: #24272b;
+  --panel: #2d3135;
+  --rule: #3b4046;
+  --legend: #dedbd3;
+  --legend-bright: #f3f0e8;
+  --legend-dim: #a3a29b;
+  --tape: #e6dbbe;
+  --tape-light: #f1e9d2;
+  --ink: #1f1e1c;
+  --rec: #e5483b;
+  --rec-off: #4d302d;
+
+  --font: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --marker: 'Permanent Marker', 'Marker Felt', 'Comic Sans MS', cursive;
+
+  --page: 1120px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --measure: 64ch;
+  --header-h: 56px;
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  margin: 0;
+  background: var(--console);
+  color: var(--legend);
+  font-family: var(--font);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--legend-bright);
+  font-stretch: 125%;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--legend-dim);
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  text-decoration-color: var(--tape);
+}
+
+:focus-visible {
+  outline: 2px solid var(--tape);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 8px 14px;
+  background: var(--tape);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.wrap {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--tape);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--tape-light);
+}
+
+/* Record light. Lit means "this is happening now". */
+.led {
+  display: inline-block;
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--rec-off);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.led-on {
+  background: var(--rec);
+  box-shadow: 0 0 0 1px rgba(255, 140, 128, 0.35), 0 0 10px 1px rgba(229, 72, 59, 0.65);
+}
+
+/* ─── Header ───────────────────────────────────────────── */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(36, 39, 43, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+
+.site-name {
+  font-weight: 700;
+  font-stretch: 125%;
+  font-size: 1rem;
+  color: var(--legend-bright);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.site-nav a {
+  font-size: 0.9375rem;
+  color: var(--legend);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--legend-bright);
+  text-decoration: underline;
+  text-decoration-color: var(--tape);
+}
+
+/* ─── Hero ─────────────────────────────────────────────── */
+
+.hero {
+  padding-top: clamp(40px, 7vw, 88px);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.hero-text {
+  max-width: var(--measure);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+}
+
+.hero-intro {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.hero-intro p:first-child {
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  color: var(--legend-bright);
+}
+
+.hero-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 28px;
+  font-size: 1rem;
+}
+
+.hero-status .led {
+  margin-top: 0.5em;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 16px;
+  font-size: 1rem;
+}
+
+/* ─── Console strip ────────────────────────────────────── */
+
+.console {
+  margin-top: clamp(48px, 7vw, 80px);
+  background: var(--panel);
+  border-block: 1px solid var(--rule);
+}
+
+.console-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+
+.console-channels {
+  --tape-top: 38px;
+  --tape-h: 58px;
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(136px, 1fr);
+  max-width: var(--page);
+  min-width: max-content;
+  margin-inline: auto;
+  padding: 14px var(--gutter) 22px;
+  list-style: none;
+}
+
+/* The tape: one torn strip laid across every channel. */
+.console-channels::before {
+  content: '';
+  position: absolute;
+  top: calc(14px + var(--tape-top));
+  left: calc(var(--gutter) - 10px);
+  right: calc(var(--gutter) - 10px);
+  height: var(--tape-h);
+  background-color: var(--tape);
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, 0.07)),
+    repeating-linear-gradient(92deg, rgba(60, 45, 20, 0.035) 0 1px, transparent 1px 4px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(
+    7px 0, calc(100% - 5px) 0, 100% 14%, calc(100% - 6px) 31%, 100% 50%,
+    calc(100% - 4px) 68%, 100% 86%, calc(100% - 7px) 100%,
+    5px 100%, 0 85%, 6px 67%, 1px 49%, 7px 30%, 2px 13%
+  );
+  transform-origin: left center;
+}
+
+.channel {
+  position: relative;
+}
+
+.channel-link {
+  display: grid;
+  grid-template-rows: var(--tape-top) var(--tape-h);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.channel-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 14px;
+  color: var(--legend-dim);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.channel-label {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-family: var(--marker);
+  font-size: 1.375rem;
+  line-height: 1;
+  white-space: nowrap;
+  transform: rotate(var(--tilt, 0deg));
+}
+
+/* Marker lines between channels, drawn by hand on the tape. */
+.channel + .channel .channel-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  bottom: 7px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  opacity: 0.78;
+}
+
+.channel-link:hover .channel-label,
+.channel-link:focus-visible .channel-label {
+  text-decoration: underline wavy var(--rec) 2px;
+  text-underline-offset: 6px;
+}
+
+.channel-link:focus-visible {
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .console-channels::before {
+    animation: lay-tape 800ms cubic-bezier(0.2, 0.7, 0.2, 1) 250ms both;
+  }
+
+  .channel-label {
+    animation: write 260ms ease-out both;
+    animation-delay: calc(700ms + var(--i) * 70ms);
+  }
+
+  .channel .led-on {
+    animation: rec-on 600ms steps(1, end) 1250ms both;
+  }
+}
+
+@keyframes lay-tape {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes write {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rec-on {
+  0%,
+  30%,
+  55% {
+    background: var(--rec-off);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  15%,
+  45%,
+  100% {
+    background: var(--rec);
+  }
+}
+
+/* ─── Sections ─────────────────────────────────────────── */
+
+.section {
+  padding-block: clamp(64px, 9vw, 112px);
+}
+
+.section + .section {
+  border-top: 1px solid var(--rule);
+}
+
+.section-head {
+  max-width: var(--measure);
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.section-head h2 {
+  font-size: clamp(1.875rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-head p {
+  margin-top: 12px;
+  color: var(--legend-dim);
+}
+
+.subhead {
+  margin: clamp(56px, 8vw, 88px) 0 28px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ─── Work ─────────────────────────────────────────────── */
+
+.entries {
+  display: grid;
+  gap: clamp(56px, 8vw, 96px);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  align-content: start;
+}
+
+.entry-shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--panel);
+}
+
+.entry-shot img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.entry-shot:hover {
+  border-color: var(--legend-dim);
+}
+
+.entry-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.entry-num {
+  color: var(--legend-dim);
+  font-size: 1rem;
+  font-weight: 600;
+  font-stretch: 100%;
+}
+
+.entry h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.now-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  color: var(--legend);
+  font-size: 0.875rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+.entry-meta {
+  margin-top: 6px;
+  color: var(--legend-dim);
+  font-size: 1rem;
+}
+
+.entry-summary {
+  margin-top: 16px;
+}
+
+.entry-points {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  padding-left: 1.1em;
+}
+
+.entry-points li::marker {
+  color: var(--legend-dim);
+}
+
+.entry-stack {
+  margin-top: 16px;
+  color: var(--legend-dim);
+  font-size: 0.9375rem;
+}
+
+.entry-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.side-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(40px, 5vw, 56px) clamp(24px, 4vw, 48px);
+}
+
+.side-grid .entry {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.side-grid .entry h3 {
+  font-size: 1.3125rem;
+}
+
+/* ─── Experience: the track sheet ──────────────────────── */
+
+.tracksheet {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.tracksheet th {
+  padding: 0 16px 12px 0;
+  color: var(--legend-dim);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--legend-dim);
+}
+
+.tracksheet td {
+  padding: 18px 16px 18px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+.tracksheet .col-track {
+  width: 4.5rem;
+  color: var(--legend-dim);
+  font-weight: 600;
+}
+
+.tracksheet .col-years {
+  width: 9.5rem;
+  white-space: nowrap;
+}
+
+.tracksheet .col-where {
+  color: var(--legend-bright);
+  font-weight: 600;
+}
+
+.tracksheet .col-notes {
+  color: var(--legend-dim);
+  max-width: 40ch;
+}
+
+.track-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tracksheet tr.is-now td {
+  background: linear-gradient(90deg, rgba(229, 72, 59, 0.07), transparent 70%);
+}
+
+.talk {
+  margin-top: 28px;
+  color: var(--legend-dim);
+  font-size: 1rem;
+}
+
+.talk cite {
+  color: var(--legend);
+  font-style: italic;
+}
+
+/* ─── How I work ───────────────────────────────────────── */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(24px, 5vw, 64px);
+  list-style: none;
+  counter-reset: step;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  padding-block: 24px;
+  border-top: 1px solid var(--rule);
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  color: var(--legend-dim);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.step h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.step p {
+  margin-top: 6px;
+  color: var(--legend);
+}
+
+.workflow-extras {
+  max-width: var(--measure);
+  margin-top: 32px;
+  color: var(--legend-dim);
+}
+
+/* ─── Gear ─────────────────────────────────────────────── */
+
+.gear-row {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 16px;
+  padding-block: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+.gear-row:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.gear-row dt {
+  color: var(--legend-dim);
+  font-weight: 600;
+}
+
+/* ─── Kind words ───────────────────────────────────────── */
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+.quote blockquote {
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.quote blockquote p::before {
+  content: '\201C';
+}
+
+.quote blockquote p::after {
+  content: '\201D';
+}
+
+.quote figcaption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.quote figcaption img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.quote-name {
+  display: block;
+  color: var(--legend-bright);
+  font-weight: 600;
+}
+
+.quote-title {
+  display: block;
+  color: var(--legend-dim);
+  font-size: 0.9375rem;
+}
+
+/* ─── Off the clock ────────────────────────────────────── */
+
+.offclock {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+}
+
+.offclock img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.offclock .section-head {
+  margin-bottom: 16px;
+}
+
+.offclock p {
+  max-width: 44ch;
+}
+
+/* ─── Contact ──────────────────────────────────────────── */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--legend-bright);
+  font-size: clamp(1.3125rem, 3vw, 1.75rem);
+  font-weight: 700;
+  font-stretch: 112%;
+  overflow-wrap: anywhere;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  color: var(--legend-dim);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--panel);
+  color: var(--legend-bright);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline-offset: 0;
+  border-color: var(--tape);
+}
+
+.form .button {
+  justify-self: start;
+}
+
+.form-note {
+  font-size: 1rem;
+}
+
+.form-note.is-error {
+  color: #ff9b91;
+}
+
+.honeypot {
+  display: none;
+}
+
+/* ─── Footer ───────────────────────────────────────────── */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 28px 40px;
+  color: var(--legend-dim);
+  font-size: 0.9375rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* ─── Small screens ────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .entry,
+  .offclock,
+  .contact-grid,
+  .quotes,
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  .nav-extra {
+    display: none;
+  }
+
+  .site-nav ul {
+    gap: 20px;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-photo {
+    max-width: 176px;
+  }
+
+  .hero-intro p:first-child {
+    font-size: 1.1875rem;
+  }
+
+  .console-channels {
+    grid-auto-columns: 128px;
+  }
+
+  .gear-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  /* The track sheet becomes a stack of takes. */
+  .tracksheet thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .tracksheet,
+  .tracksheet tbody,
+  .tracksheet tr,
+  .tracksheet td {
+    display: block;
+    width: auto;
+  }
+
+  .tracksheet tr {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    padding-block: 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .tracksheet td {
+    padding: 0;
+    border: 0;
+    grid-column: 2;
+  }
+
+  .tracksheet .col-track {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    width: auto;
+  }
+
+  .tracksheet .col-years {
+    color: var(--legend-dim);
+    font-size: 0.9375rem;
+  }
+
+  .tracksheet .col-notes {
+    margin-top: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

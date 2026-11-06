@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Eric Askew, Resume</title>
+<style>
+  @page { size: Letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0;
+    color: #1c1d1f;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.34;
+  }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3, p, ul { margin: 0; padding: 0; }
+
+  header { padding-bottom: 7pt; border-bottom: 1.2pt solid #1c1d1f; }
+  h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.01em; line-height: 1.05; }
+  .contact { margin-top: 4pt; font-size: 9pt; color: #44464a; }
+  .contact span + span::before { content: '  |  '; white-space: pre; color: #9a9ca0; }
+
+  section { margin-top: 9pt; }
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding-bottom: 2pt;
+    margin-bottom: 4pt;
+    border-bottom: 0.6pt solid #b9bbbf;
+  }
+  .summary { color: #2b2c2f; }
+
+  .skills { margin: 0; display: grid; grid-template-columns: 8.4em 1fr; gap: 1.5pt 10pt; }
+  .skills dt { font-weight: 700; }
+  .skills dd { margin: 0; }
+
+  .role { margin-top: 6pt; break-inside: avoid; }
+  .role:first-of-type { margin-top: 0; }
+  .role-head { display: flex; justify-content: space-between; gap: 12pt; }
+  h3 { font-size: 10pt; font-weight: 700; }
+  h3 .title { font-weight: 400; }
+  .when { white-space: nowrap; font-size: 9pt; color: #44464a; }
+  .context { font-size: 9pt; color: #44464a; }
+  ul { margin-top: 2pt; padding-left: 11pt; }
+  li { margin-top: 1.2pt; }
+  li::marker { color: #8a8c90; }
+
+  .projects li { margin-top: 2pt; }
+  .projects b { font-weight: 700; }
+  .projects .url { color: #44464a; font-size: 9pt; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18pt; }
+  .compact p { margin-top: 1.5pt; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Eric Askew</h1>
+  <p class="contact">
+    <span><a href="mailto:easkew81@yahoo.com">easkew81@yahoo.com</a></span>
+    <span><a href="https://www.linkedin.com/in/easkew51/">linkedin.com/in/easkew51</a></span>
+    <span><a href="https://github.com/Moonwalker5823">github.com/Moonwalker5823</a></span>
+    <span><a href="https://ea-portfolio-khaki.vercel.app/">ea-portfolio-khaki.vercel.app</a></span>
+  </p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">
+    Full-stack engineer building production web apps with TypeScript, React, NestJS, Laravel and Vue.js, currently on the deal
+    lifecycle of a physical commodity trading platform at Commod. Works spec-first with AI agents: OpenSpec proposals reviewed
+    before code, Claude Code for implementation, automated quality gates before every push. Former NYC audio engineer.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>TypeScript, JavaScript (ES6+), PHP, SQL, GraphQL, HTML, CSS</dd>
+    <dt>Frameworks</dt><dd>React 19, NestJS, Node.js, Express, Vue.js, Laravel, Next.js, Redux, TanStack Query, Tailwind CSS</dd>
+    <dt>Data &amp; cloud</dt><dd>PostgreSQL, MySQL, MongoDB, Redis, Socket.IO, AWS S3, Vercel, Railway</dd>
+    <dt>AI &amp; workflow</dt><dd>Claude Code, OpenSpec, spec-driven development, agentic code review, Claude/OpenAI APIs, Copilot</dd>
+    <dt>Testing</dt><dd>Jest, React Testing Library, Cucumber, SuperTest, Mocha</dd>
+    <dt>Practices</dt><dd>REST API design, Agile/Scrum, CI/CD, performance optimization, responsive UI</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="role-head">
+      <h3>Commod <span class="title">| Full-Stack Engineer</span></h3>
+      <span class="when">Jul 2026 – Present</span>
+    </div>
+    <p class="context">Physical commodity trading platform: negotiation, contracts, compliance and settlement</p>
+    <ul>
+      <li>Build the deal lifecycle end to end, from React 19/TypeScript screens to NestJS, PostgreSQL and Redis services</li>
+      <li>Built settlement reconciliation that checks a short delivery against the contract terms the deal was agreed under</li>
+      <li>Built deal gates that hold a deal at the correct stage and tell both counterparties exactly what is blocking it</li>
+      <li>Ship spec-first with OpenSpec and Claude Code, behind a self-built pre-push gate: lint, types, unit tests, a seeded end-to-end run and an AI review against team standards</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <h3>Hemmings / American City Business Journals <span class="title">| Software Engineer</span></h3>
+      <span class="when">2022 – Apr 2026</span>
+    </div>
+    <p class="context">Production auction platform for the classic-car marketplace</p>
+    <ul>
+      <li>Built full-stack features with Laravel, Vue.js and MySQL on an auction platform serving thousands of users</li>
+      <li>Designed and built a max-bid system that automatically places incremental bids up to a user-defined limit</li>
+      <li>Built the bidding and checkout components and modals</li>
+      <li>Led a membership upsell flow in checkout that increased conversion; owned features from concept to deployment</li>
+          </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <h3>BeamQL <span class="title">| Co-Creator, Software Engineer</span></h3>
+      <span class="when">2021 – 2022</span>
+    </div>
+    <ul>
+      <li>Open-source tool that generates a GraphQL schema and resolvers over an existing REST API without touching its endpoints</li>
+      <li>Built the react-flow schema diagram in React (tested with React Testing Library) and the Node.js/Express server</li>
+    </ul>
+  </div>
+</section>
+
+<section class="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><b>Veganish Cafe</b>, client site <span class="url">veganish-one.vercel.app</span>: site for a Bridgeport, CT cafe with online ordering and structured data for local search.</li>
+    <li><b>DigiHeart</b> <span class="url">digiheart.vercel.app</span>: memorial platform with JWT auth, S3 media and admin approval. React, Express, MongoDB.</li>
+    <li><b>VibeList</b> <span class="url">vibelist-psi.vercel.app</span>: Claude API reads a mood, Last.fm returns a playlist, the UI re-themes. React, Node.js.</li>
+    <li><b>TradeRoots</b> <span class="url">traderoots.vercel.app</span>: interactive guide to global commodity markets. React, Recharts.</li>
+    <li><b>TruckStar</b> <span class="url">erictruckstarfoodfinder.vercel.app</span>: food trucks on a live map with Google Places and Leaflet.</li>
+  </ul>
+</section>
+
+<div class="two-col">
+  <section class="compact">
+    <h2>Prior experience</h2>
+    <p><b>FPWA</b>, Facilities Coordinator, 2018 – 2021. Conference-center AV and IT support.</p>
+    <p><b>Quad Recording Studios</b>, Audio Engineer, 2010 – 2015. Sessions for Jamie Foxx, T.I., KRS-One.</p>
+  </section>
+  <section class="compact">
+    <h2>Education &amp; talks</h2>
+    <p><b>Codesmith</b>, Software Engineering Residency</p>
+    <p><b>School for Audio Engineering</b>, Certified Audio Engineer</p>
+    <p><b>Virginia State University</b>, Audio Engineering/Business coursework</p>
+    <p><b>Talk:</b> Adventures in Deno.land, Single Sprout Speaker Series</p>
+  </section>
+</div>
+
+</body>
+</html>

@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local tool state
+.superpowers/
+.claude/worktrees/
+.claude/settings.local.json
